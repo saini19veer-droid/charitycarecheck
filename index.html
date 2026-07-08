@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Charity Care Eligibility Calculator | CharityCareCheck</title>
+<meta name="description" content="Find out if you qualify for free or discounted hospital care. Free 2-minute charity care eligibility calculator plus plain-language guides to federal and state financial assistance rules.">
+<link rel="canonical" href="https://www.charitycarecheck.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hospital Charity Care Eligibility Calculator | CharityCareCheck">
+<meta property="og:description" content="Find out if you qualify for free or discounted hospital care. Free, 2-minute eligibility estimate.">
+<meta property="og:url" content="https://www.charitycarecheck.com/">
+<meta name="theme-color" content="#1F3A35">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:image" content="https://www.charitycarecheck.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CharityCareCheck — Hospital Charity Care Eligibility Calculator">
+<meta name="twitter:description" content="Free 2-minute eligibility estimate for hospital financial assistance.">
+<meta name="twitter:image" content="https://www.charitycarecheck.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "CharityCareCheck",
+      "url": "https://www.charitycarecheck.com/",
+      "description": "Independent educational resource explaining hospital charity care and financial assistance eligibility in the United States."
+    },
+    {
+      "@type": "WebSite",
+      "name": "CharityCareCheck",
+      "url": "https://www.charitycarecheck.com/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Primary">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-mark" aria-hidden="true">C</span>
+      CharityCareCheck
+    </a>
+
+    <ul class="nav__links" data-nav-links>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li class="nav__dropdown">
+        <a href="#" aria-haspopup="true">State Guides ▾</a>
+        <div class="nav__dropdown-panel">
+          <a href="california.html">California</a>
+          <a href="texas.html">Texas</a>
+          <a href="florida.html">Florida</a>
+        </div>
+      </li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <div class="container" style="padding-top:18px;">
+    <div class="ad-slot ad-slot--leaderboard" aria-label="Advertisement">Advertisement <span>970×90 · leaderboard</span></div>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <span class="hero__kicker">Federal law has required this since 2010</span>
+        <h1>Find out if you qualify for free or discounted hospital care</h1>
+        <p class="hero__lede">Most nonprofit hospitals in the U.S. are legally required to offer financial assistance to patients who can't fully afford their bills — yet most eligible patients never apply. See where you likely stand in under two minutes, before you pay or set up a payment plan.</p>
+        <div class="hero__actions">
+          <a href="#calculator" class="btn btn-primary">Check your eligibility — free</a>
+          <a href="how-it-works.html" class="btn btn-secondary">See how it works</a>
+        </div>
+        <div class="hero__trust">
+          <div><strong>100M+</strong>people in the U.S. carry medical debt<sup>1</sup></div>
+          <div><strong>$21B</strong>in hospital charity care provided in 2022<sup>2</sup></div>
+          <div><strong>2 min</strong>to get your free estimate</div>
+        </div>
+      </div>
+
+      <div class="fpl-gauge" aria-label="Illustration of how income relative to the Federal Poverty Level typically affects charity care eligibility">
+        <div class="fpl-gauge__head">
+          <span class="fpl-gauge__title">Illustrative eligibility ranges</span>
+          <span class="fpl-gauge__updated">2026 FPL data</span>
+        </div>
+        <svg viewBox="0 0 520 188" role="img" aria-labelledby="gaugeTitle gaugeDesc">
+          <title id="gaugeTitle">Income as a percent of the Federal Poverty Level vs. typical charity care generosity</title>
+          <desc id="gaugeDesc">A horizontal bar showing that hospitals most commonly offer free care near or below 100-200% of the Federal Poverty Level and discounted care up to roughly 400%, though exact thresholds vary by hospital.</desc>
+
+          <!-- bands -->
+          <rect x="16" y="64" width="96"  height="28" rx="3" style="fill:var(--sage)"/>
+          <rect x="112" y="64" width="96" height="28" rx="3" style="fill:var(--sage); opacity:.55"/>
+          <rect x="208" y="64" width="192" height="28" style="fill:var(--amber); opacity:.55"/>
+          <rect x="400" y="64" width="96" height="28" rx="3" style="fill:var(--ink-soft); opacity:.22"/>
+
+          <!-- ticks -->
+          <g style="stroke:var(--line-strong); stroke-width:1">
+            <line x1="16" y1="60" x2="16" y2="96"/>
+            <line x1="112" y1="60" x2="112" y2="96"/>
+            <line x1="208" y1="60" x2="208" y2="96"/>
+            <line x1="304" y1="60" x2="304" y2="96"/>
+            <line x1="400" y1="60" x2="400" y2="96"/>
+            <line x1="496" y1="60" x2="496" y2="96"/>
+          </g>
+          <g style="fill:var(--ink-soft); font-size:11px; font-family:var(--font-mono); text-anchor:middle">
+            <text x="16" y="112">0%</text>
+            <text x="112" y="112">100%</text>
+            <text x="208" y="112">200%</text>
+            <text x="304" y="112">300%</text>
+            <text x="400" y="112">400%</text>
+            <text x="496" y="112">500%+</text>
+          </g>
+
+          <!-- marker: example family of 4 at 200% FPL -->
+          <g>
+            <line x1="208" y1="30" x2="208" y2="64" style="stroke:var(--forest); stroke-width:1.5; stroke-dasharray:3 3"/>
+            <path d="M208 18 l8 12 h-16 z" style="fill:var(--forest)"/>
+            <text x="208" y="14" text-anchor="middle" style="fill:var(--forest); font-size:10.5px; font-family:var(--font-mono); font-weight:600">EX: FAMILY OF 4 ≈ $66,000/YR</text>
+          </g>
+
+          <g style="fill:var(--ink-soft); font-size:11px; font-family:var(--font-body)">
+            <text x="16" y="148">Often fully free</text>
+            <text x="208" y="148">Often discounted</text>
+            <text x="400" y="148">Varies by hospital</text>
+          </g>
+        </svg>
+        <ul class="fpl-gauge__legend">
+          <li><i style="background:var(--sage)"></i>Commonly 100% free care</li>
+          <li><i style="background:var(--amber); opacity:.7"></i>Commonly sliding-scale discount</li>
+          <li><i style="background:var(--ink-soft); opacity:.3"></i>Hospital-specific, ask directly</li>
+        </ul>
+        <p class="fpl-gauge__note">Illustrative only. Each hospital sets its own income cutoffs in its Financial Assistance Policy (FAP) — yours may be more or less generous than this example. Use the calculator below for an estimate based on your numbers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRUST STRIP ===================== -->
+  <section class="trust-strip">
+    <div class="container trust-strip__row">
+      <div class="trust-strip__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
+        <div><h4>Required by federal law</h4><p>IRS Section 501(r) requires nonprofit hospitals to maintain a written financial assistance policy.</p></div>
+      </div>
+      <div class="trust-strip__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <div><h4>Free, no obligation</h4><p>This tool only estimates eligibility. It never asks for payment or your Social Security number.</p></div>
+      </div>
+      <div class="trust-strip__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 21c0-4 3-6.5 7-6.5s7 2.5 7 6.5"/></svg>
+        <div><h4>Insured or uninsured</h4><p>Many policies apply to underinsured patients too, not only people without coverage.</p></div>
+      </div>
+      <div class="trust-strip__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+        <div><h4>About 2 minutes</h4><p>A handful of questions about household size, income, and where you were treated.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MAIN CONTENT + SIDEBAR RAIL ===================== -->
+  <section class="section">
+    <div class="container has-rail">
+      <div class="prose">
+
+        <div class="section-head">
+          <span class="eyebrow">What is charity care</span>
+          <h2>Hospital charity care, explained simply</h2>
+        </div>
+        <p>"Charity care" — also called financial assistance — is free or discounted hospital care for patients who can't afford to pay their bill in full. It isn't a favor a hospital chooses to do. For nonprofit hospitals, which make up the majority of U.S. community hospitals, it's a condition of keeping their federal tax-exempt status.</p>
+        <p>Under <a href="https://www.irs.gov/charities-non-profits/financial-assistance-policy-and-emergency-medical-care-policy-section-501r4" target="_blank" rel="noopener">IRS Section 501(r)(4)</a>, every nonprofit hospital facility must adopt a written Financial Assistance Policy (FAP), publish it along with a plain-language summary and application form, and apply it to all emergency and medically necessary care. Hospitals can set their own eligibility rules, but the rules have to exist, be public, and be followed consistently — that's why they vary so much from one hospital to the next.</p>
+        <p>Two related federal protections matter just as much as the FAP itself:</p>
+        <ul>
+          <li><strong>The "amounts generally billed" (AGB) limit</strong> — under <a href="https://www.irs.gov/charities-non-profits/limitation-on-charges-section-501r5" target="_blank" rel="noopener">Section 501(r)(5)</a>, a FAP-eligible patient can't be charged more than what insured patients are typically charged for the same care, regardless of the hospital's sticker price.</li>
+          <li><strong>The collections pause</strong> — under <a href="https://www.irs.gov/charities-non-profits/billing-and-collections-section-501r6" target="_blank" rel="noopener">Section 501(r)(6)</a>, a hospital generally can't send your account to collections, report it to a credit bureau, or sue you until it has made a reasonable effort to find out whether you qualify for financial assistance.</li>
+        </ul>
+
+        <div class="callout callout--disclaimer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M11 11h1v5h1"/></svg>
+          <div><h4>This page is educational, not legal or medical advice</h4><p>CharityCareCheck explains general rules and typical practice. Your hospital's actual policy controls what you qualify for — always confirm details with its financial assistance office. See our <a href="about.html">about & editorial process</a> page.</p></div>
+        </div>
+
+        <div class="ad-slot ad-slot--incontent" aria-label="Advertisement">Advertisement <span>responsive · in-content</span></div>
+
+        <div class="section-head">
+          <span class="eyebrow">Who qualifies</span>
+          <h2>Do you qualify? The income test most hospitals use</h2>
+        </div>
+        <p>Almost every hospital ties eligibility to your household income as a percentage of the <a href="https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines" target="_blank" rel="noopener">federal poverty guidelines (FPL)</a>, published each January by HHS. For 2026, the guideline for one person in the 48 contiguous states is <strong>$15,960</strong>; for a family of four it's <strong>$33,000</strong>. A hospital might offer:</p>
+        <ul>
+          <li><strong>100% free care</strong> for household income up to roughly 150–200% of FPL ($33,000–$44,000 for a family of four in 2026)</li>
+          <li><strong>A sliding-scale discount</strong> — commonly 20% to 90% off — for income between roughly 200% and 400% of FPL</li>
+          <li><strong>Case-by-case "catastrophic" assistance</strong> above 400% of FPL when the bill is very large relative to income, at many (not all) hospitals</li>
+        </ul>
+        <p>These exact numbers are examples, not promises — a hospital in a high-cost city may set its free-care line at 300% or 400% of FPL, while another sets it at 125%. <a href="how-it-works.html">How It Works</a> walks through how to read your specific hospital's policy.</p>
+
+        <div class="card-grid">
+          <div class="card">
+            <span class="mono-num">01</span>
+            <h3>Income &amp; household size</h3>
+            <p>Hospitals generally use gross household income before taxes, counting everyone who depends on that income — not just the patient.</p>
+          </div>
+          <div class="card">
+            <span class="mono-num">02</span>
+            <h3>Insurance status</h3>
+            <p>Uninsured patients usually qualify most easily, but many FAPs also cover insured patients with large deductibles or out-of-pocket costs.</p>
+          </div>
+          <div class="card">
+            <span class="mono-num">03</span>
+            <h3>Where you were treated</h3>
+            <p>Eligibility is set per hospital facility, not per health system. Two hospitals under the same parent company can have different rules.</p>
+          </div>
+        </div>
+
+        <div class="section-head">
+          <span class="eyebrow">What it covers</span>
+          <h2>What charity care pays for — and what it usually doesn't</h2>
+        </div>
+        <ul class="ledger-list">
+          <li><div><h4>Emergency room care</h4><p>Covered under the hospital's FAP regardless of ability to pay up front.</p></div><span class="tag">Usually covered</span></li>
+          <li><div><h4>Inpatient hospital stays</h4><p>Medically necessary admissions billed directly by the hospital.</p></div><span class="tag">Usually covered</span></li>
+          <li><div><h4>Hospital-owned outpatient clinics</h4><p>Care delivered at clinics the hospital itself owns and bills for.</p></div><span class="tag">Often covered</span></li>
+          <li><div><h4>Independent physician bills</h4><p>A surgeon or specialist who bills separately from the hospital may not be bound by the hospital's FAP.</p></div><span class="tag">Check separately</span></li>
+          <li><div><h4>Ambulance &amp; outside labs</h4><p>Third-party ambulance companies and reference labs usually have their own billing and assistance policies.</p></div><span class="tag">Usually separate</span></li>
+          <li><div><h4>Outpatient prescriptions</h4><p>Medication picked up at a retail pharmacy is typically outside the hospital's FAP.</p></div><span class="tag">Usually not covered</span></li>
+        </ul>
+
+        <div class="section-head">
+          <span class="eyebrow">How to apply</span>
+          <h2>How to apply, step by step</h2>
+        </div>
+        <ol class="steps">
+          <li><h4>Find the hospital's Financial Assistance Policy</h4><p>Search "[hospital name] financial assistance policy" or look for a link in the footer of the hospital's website — federal rules require it to be posted.</p></li>
+          <li><h4>Request the application &amp; plain-language summary</h4><p>You can ask for a paper copy at the registration desk, ER, or billing office at no charge.</p></li>
+          <li><h4>Gather income documentation</h4><p>Recent pay stubs, a tax return, or a benefits award letter (SNAP, Medicaid, SSI) are typically accepted.</p></li>
+          <li><h4>Submit before the deadline</h4><p>Federal rules require hospitals to accept applications for at least 240 days after your first post-discharge bill.</p></li>
+          <li><h4>Get your determination — and appeal if needed</h4><p>If you're approved for a lower tier than expected, you can usually submit more documentation and ask for a re-review.</p></li>
+        </ol>
+
+        <div class="callout callout--warning">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 9v4M12 17h.01M10.3 3.6L2.7 17a2 2 0 0 0 1.7 3h15.2a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0z"/></svg>
+          <div><h4>Watch the 240-day window</h4><p>Hospitals must let you apply for at least 240 days from your first post-discharge bill, and must give 30 days' notice before reporting you to a collection agency or credit bureau. If you're already in collections, you may still be able to apply — ask the hospital directly.</p></div>
+        </div>
+
+        <div class="section-head">
+          <span class="eyebrow">State rules vary</span>
+          <h2>Charity care rules by state</h2>
+        </div>
+        <p>Federal law sets the floor. Several states layer on stricter income thresholds, shorter response times, or broader eligibility for insured patients. Start with your state's guide:</p>
+        <div class="card-grid">
+          <div class="card">
+            <h3>California</h3>
+            <p>Some of the strictest charity-care rules in the country, including required income thresholds for nonprofit hospitals.</p>
+            <a href="california.html" class="btn btn-secondary btn-sm">California guide</a>
+          </div>
+          <div class="card">
+            <h3>Texas</h3>
+            <p>State law sets minimum charity-care spending requirements tied to net patient revenue for nonprofit hospitals.</p>
+            <a href="texas.html" class="btn btn-secondary btn-sm">Texas guide</a>
+          </div>
+          <div class="card">
+            <h3>Florida</h3>
+            <p>Charity care obligations are shaped by the state's Health Care Responsibility Act and hospital-specific policies.</p>
+            <a href="florida.html" class="btn btn-secondary btn-sm">Florida guide</a>
+          </div>
+        </div>
+        <div class="tag-row">
+          <a href="faq.html">Read the full FAQ →</a>
+          <a href="how-it-works.html">Deep dive: how it works →</a>
+        </div>
+
+      </div>
+
+      <aside class="ad-rail">
+        <div class="ad-slot ad-slot--sidebar" aria-label="Advertisement">Advertisement <span>300×600 · sticky sidebar</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===================== CALCULATOR ===================== -->
+  <section id="calculator" class="section section--alt">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">Free eligibility estimator</span>
+        <h2>Estimate your eligibility in under 2 minutes</h2>
+        <p>Answer a few questions about your household and the hospital that treated you. This gives you a starting estimate — not a guarantee — before you contact the hospital directly.</p>
+      </div>
+
+      <div class="calc-embed">
+        <div class="calc-embed__head">
+          <div>
+            <h3>Charity Care Eligibility Calculator</h3>
+            <p>Estimates only. Always confirm your result with the hospital's financial assistance office.</p>
+          </div>
+        </div>
+        <div class="calc-embed__frame-wrap">
+          <!-- The interactive calculator is a separate, sandboxed page (calculator.html) embedded here.
+               Swap the src below once calculator.html + config.js are deployed alongside this site. -->
+          <iframe
+            src="calculator.html"
+            title="Hospital charity care eligibility calculator"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="calc-embed__foot">Your answers stay in your browser for this session — we don't sell or share what you enter. See our <a href="privacy.html">Privacy Policy</a>.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOURCES ===================== -->
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="section-head">
+        <span class="eyebrow">Sources</span>
+        <h2>Where this information comes from</h2>
+        <p>We link directly to primary sources so you can verify anything on this page yourself.</p>
+      </div>
+      <ol class="sources-list">
+        <li><span>1.</span><span>American Medical Association, Council on Medical Service report on medical debt and nonprofit hospital charity care policy — <a href="https://councilreports.ama-assn.org/councilreports/downloadreport?uri=%2Fcouncilreports%2Fi24_cms01_post_HOD.pdf" target="_blank" rel="noopener">councilreports.ama-assn.org</a></span></li>
+        <li><span>2.</span><span>Johns Hopkins Bloomberg School of Public Health, analysis of 2022 nonprofit hospital community-benefit spending — <a href="https://publichealth.jhu.edu/2025/nonprofit-hospitals-spend-big-on-community-benefits-depending-on-how-you-define-them" target="_blank" rel="noopener">publichealth.jhu.edu</a></span></li>
+        <li><span>3.</span><span>IRS, "Financial Assistance Policy and Emergency Medical Care Policy – Section 501(r)(4)" — <a href="https://www.irs.gov/charities-non-profits/financial-assistance-policy-and-emergency-medical-care-policy-section-501r4" target="_blank" rel="noopener">irs.gov</a></span></li>
+        <li><span>4.</span><span>IRS, "Limitation on Charges – Section 501(r)(5)" and "Billing and Collections – Section 501(r)(6)" — <a href="https://www.irs.gov/charities-non-profits/billing-and-collections-section-501r6" target="_blank" rel="noopener">irs.gov</a></span></li>
+        <li><span>5.</span><span>U.S. Department of Health &amp; Human Services (ASPE), 2026 Poverty Guidelines — <a href="https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines" target="_blank" rel="noopener">aspe.hhs.gov</a></span></li>
+        <li><span>6.</span><span>Congressional Research Service, "Nonprofit Hospitals, Tax Benefits, and Charity Care" — <a href="https://www.congress.gov/crs-product/IF13192" target="_blank" rel="noopener">congress.gov</a></span></li>
+      </ol>
+
+      <div class="callout callout--disclaimer" style="margin-top:1.8rem;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M11 11h1v5h1"/></svg>
+        <div><h4>General disclaimer</h4><p>CharityCareCheck is an independent educational resource. We are not a hospital, a law firm, a government agency, or a financial advisor, and our estimates are not a guarantee of approval. Learn more about how we research and review this content on our <a href="about.html">About page</a>.</p></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <div class="site-footer__brand">CharityCareCheck</div>
+      <p style="max-width:32ch; font-size:.9rem;">A free, independent guide to hospital financial assistance and charity care rules in the United States.</p>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>State guides</h5>
+      <ul>
+        <li><a href="california.html">California</a></li>
+        <li><a href="texas.html">Texas</a></li>
+        <li><a href="florida.html">Florida</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="about.html">Editorial Process</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container site-footer__legal">
+    <p>CharityCareCheck is not a hospital, insurer, law firm, or government agency, and is not affiliated with any specific hospital system. Content is for general educational purposes only and is not legal, medical, or financial advice. Eligibility rules vary by hospital and change over time — always confirm details directly with the hospital's financial assistance office. Calculator results are estimates only.</p>
+    <p>© <span id="ccc-year">2026</span> CharityCareCheck.com · Page last reviewed June 2026</p>
+  </div>
+</footer>
+
+<script>document.getElementById('ccc-year').textContent = new Date().getFullYear();</script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
