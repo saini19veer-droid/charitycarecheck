@@ -211,13 +211,14 @@ main{ display:block; }
 }
 
 /* ---------- Ad placeholders ---------- */
+/* Placeholder text hidden — real AdSense units will replace this content after approval */
 .ad-slot{
   display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.3em;
-  background: var(--paper-raised); border: 1px dashed var(--line-strong); border-radius: var(--radius-sm);
-  color: var(--ink-soft); font-family: var(--font-mono); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase;
+  background: transparent; border: none; border-radius: var(--radius-sm);
+  color: transparent; font-size:0;
   margin: 0 auto;
 }
-.ad-slot span{ opacity:.7; }
+.ad-slot span{ display:none; }
 .ad-slot--leaderboard{ width:100%; max-width:970px; min-height:90px; }
 .ad-slot--incontent{ width:100%; min-height:250px; margin: 2.5rem auto; max-width:728px; }
 .ad-slot--sidebar{ width:100%; min-height:600px; position: sticky; top: calc(var(--nav-h) + 24px); }
