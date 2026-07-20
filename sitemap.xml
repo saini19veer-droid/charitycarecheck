@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core pages -->
+  <url><loc>https://charitycarecheck.com/</loc><lastmod>2026-07-20</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://charitycarecheck.com/calculator.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://charitycarecheck.com/how-it-works.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://charitycarecheck.com/faq.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://charitycarecheck.com/hospitals.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/articles.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/about.html</loc><lastmod>2026-07-20</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://charitycarecheck.com/contact.html</loc><lastmod>2026-07-20</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://charitycarecheck.com/privacy.html</loc><lastmod>2026-07-20</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <!-- Blog / Article pages -->
+  <url><loc>https://charitycarecheck.com/what-happens-if-you-dont-pay-hospital-bill.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://charitycarecheck.com/does-charity-care-cover-er-visits.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://charitycarecheck.com/charity-care-application-denied.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://charitycarecheck.com/new-york-charity-care-eligibility-2026.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://charitycarecheck.com/illinois-hospital-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- State pages -->
+  <url><loc>https://charitycarecheck.com/california.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/texas.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/florida.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/new-york.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/illinois.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/massachusetts.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/colorado.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/washington.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/oregon.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/minnesota.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/new-jersey.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/connecticut.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/maryland.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/arizona.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/georgia.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/north-carolina.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/ohio.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/pennsylvania.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://charitycarecheck.com/virginia.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Hospital pages -->
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/mayo-clinic-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/cleveland-clinic-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/johns-hopkins-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/new-york-presbyterian-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/nyu-langone-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/mass-general-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/cedars-sinai-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/ucla-health-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/ucsf-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/northwestern-memorial-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/brigham-womens-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/stanford-health-care-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/houston-methodist-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/vanderbilt-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/duke-health-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/northwell-health-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/montefiore-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/upmc-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/jackson-memorial-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://charitycarecheck.com/charitycarecheck-hospital-pages/yale-new-haven-financial-assistance.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+</urlset>
