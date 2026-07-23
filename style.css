@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Massachusetts Hospital Charity Care Rules (2026)</title>
-<meta name="description" content="How Massachusetts's Health Safety Net program supplements hospital charity care for patients under 400% FPL, including proactive screening requirements and strong patient protections.">
-<link rel="canonical" href="https://charitycarecheck.com/massachusetts.html">
+<title>Colorado Hospital Charity Care Rules (HB 22-1285) | CharityCareCheck</title>
+<meta name="description" content="How Colorado's HB 22-1285 requires free care for patients under 250% FPL and substantial discounts up to 400% FPL, with limits on cost-sharing up to 600% FPL.">
+<link rel="canonical" href="https://charitycarecheck.com/colorado.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hospital Charity Care in Massachusetts | CharityCareCheck">
-<meta property="og:description" content="How Massachusetts's Health Safety Net program and state charity care laws protect patients and extend financial assistance to those under 400% FPL.">
-<meta property="og:url" content="https://charitycarecheck.com/massachusetts.html">
+<meta property="og:title" content="Hospital Charity Care in Colorado | CharityCareCheck">
+<meta property="og:description" content="How Colorado's HB 22-1285 requires hospitals to provide free care under 250% FPL and discounts up to 400% FPL for all patients.">
+<meta property="og:url" content="https://charitycarecheck.com/colorado.html">
 <meta name="theme-color" content="#1F3A35">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
@@ -29,8 +29,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Hospital Charity Care in Massachusetts",
-  "description": "How Massachusetts's Health Safety Net program supplements hospital charity care, requiring proactive screening and extending benefits to patients under 400% FPL.",
+  "headline": "Hospital Charity Care in Colorado",
+  "description": "How Colorado HB 22-1285 requires hospitals to provide free care under 250% FPL, substantial discounts up to 400% FPL, and cost-sharing limits up to 600% FPL.",
   "author": { "@type": "Person", "name": "Raguiritas" },
   "publisher": { "@type": "Organization", "name": "CharityCareCheck" },
   "dateModified": "2026-07-01"
@@ -87,13 +87,13 @@
   </div>
 
   <div class="page-header container">
-    <div class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#calculator">State Guides</a> / Massachusetts</div>
+    <div class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#calculator">State Guides</a> / Colorado</div>
     <span class="eyebrow">State guide</span>
-    <h1>Hospital charity care in Massachusetts</h1>
-    <p>Massachusetts has some of the strongest charity care laws in the country, combining federal 501(r) requirements with a state-funded Health Safety Net program that supplements hospital charity care and requires hospitals to proactively screen all patients — not just those who ask.</p>
+    <h1>Hospital charity care in Colorado</h1>
+    <p>Colorado passed landmark hospital financial assistance legislation in 2022 that significantly expanded patient rights — requiring free care at a higher income threshold than the federal baseline and capping cost-sharing for a broad range of patients.</p>
     <div class="tag-row">
       <a href="#threshold">Income thresholds</a>
-      <a href="#hsn">Health Safety Net</a>
+      <a href="#protections">HB 22-1285 rules</a>
       <a href="#find-policy">Find your policy</a>
     </div>
   </div>
@@ -103,59 +103,59 @@
       <div class="prose">
 
         <div class="card-grid">
-          <div class="card"><span class="mono-num">Program</span><h3>Health Safety Net (HSN)</h3><p>Massachusetts's Health Safety Net reimburses hospitals and community health centers for services provided to low-income uninsured and underinsured residents, supplementing standard charity care programs.</p></div>
-          <div class="card"><span class="mono-num">Threshold</span><h3>Up to 400% FPL</h3><p>The HSN covers patients at or below 400% of the federal poverty level, with different benefit tiers depending on income and insurance status.</p></div>
-          <div class="card"><span class="mono-num">Key rule</span><h3>Proactive screening required</h3><p>Massachusetts hospitals must screen all patients for eligibility for public programs and financial assistance — you don't have to know to ask.</p></div>
-          <div class="card"><span class="mono-num">Applies to</span><h3>All acute care hospitals</h3><p>All licensed acute care hospitals in Massachusetts must participate in the Health Safety Net program.</p></div>
+          <div class="card"><span class="mono-num">Law</span><h3>HB 22-1285 (2022)</h3><p>Colorado's House Bill 22-1285 enacted sweeping hospital financial assistance reforms, raising the free-care threshold and adding new limits on what hospitals can charge lower-income patients.</p></div>
+          <div class="card"><span class="mono-num">Free care</span><h3>Under 250% FPL</h3><p>Colorado requires 100% free care for patients at or below 250% FPL — higher than the typical federal baseline of 200% FPL.</p></div>
+          <div class="card"><span class="mono-num">Discounts</span><h3>Up to 400% FPL</h3><p>Substantial sliding-scale discounts are required for patients between 250% and 400% FPL.</p></div>
+          <div class="card"><span class="mono-num">Cost-sharing limits</span><h3>Up to 600% FPL</h3><p>Even patients above 400% FPL have cost-sharing limits — hospitals cannot charge more than a set percentage of income for patients up to 600% FPL.</p></div>
         </div>
 
         <div id="threshold" class="section-head">
           <span class="eyebrow">Income thresholds</span>
-          <h2>Who qualifies for free or reduced care in Massachusetts</h2>
+          <h2>Colorado's three-tier system under HB 22-1285</h2>
         </div>
-        <p>Massachusetts uses both the federal 501(r) framework and the state Health Safety Net to provide layered protections. The HSN has its own income tiers:</p>
+        <p>Colorado's 2022 law created a three-tier system that extends financial protection to a much wider range of patients than most states:</p>
         <div class="table-wrap">
           <table class="data-table">
-            <thead><tr><th>Income level</th><th>Typical benefit</th></tr></thead>
+            <thead><tr><th>Income level</th><th>Required benefit</th></tr></thead>
             <tbody>
-              <tr><td>Under 100% FPL ($15,960 for 1 person)</td><td>Full coverage through HSN</td></tr>
-              <tr><td>100%–300% FPL</td><td>Sliding-scale HSN coverage</td></tr>
-              <tr><td>300%–400% FPL</td><td>Partial assistance, varies by hospital</td></tr>
-              <tr><td>Above 400% FPL</td><td>Depends on individual hospital policy</td></tr>
+              <tr><td>Under 250% FPL (~$39,900 for 1 person)</td><td>100% free care</td></tr>
+              <tr><td>250%–400% FPL</td><td>Substantial sliding-scale discount</td></tr>
+              <tr><td>400%–600% FPL</td><td>Cost-sharing limits apply</td></tr>
+              <tr><td>Above 600% FPL</td><td>Standard hospital policy applies</td></tr>
             </tbody>
           </table>
         </div>
-        <p>The HSN is separate from — and in addition to — each hospital's own charity care program under 501(r). Patients may qualify for both, and hospitals are required to apply whichever benefit is more favorable to the patient.</p>
+        <p>The 250% FPL free-care threshold is meaningfully higher than the federal baseline, meaning more Colorado residents qualify for completely free care compared to many other states. For 2026, 250% FPL for a family of four is approximately $82,500 per year.</p>
 
         <div class="ad-slot ad-slot--incontent" aria-label="Advertisement"></div>
 
         <div id="protections" class="section-head">
-          <span class="eyebrow">Health Safety Net</span>
-          <h2>How the Health Safety Net works alongside hospital charity care</h2>
+          <span class="eyebrow">HB 22-1285 protections</span>
+          <h2>What Colorado's 2022 law requires</h2>
         </div>
         <ul class="ledger-list">
-          <li><div><h4>Proactive patient screening</h4><p>Hospitals must screen every patient for eligibility for MassHealth, ConnectorCare, and the Health Safety Net — whether or not the patient asks.</p></div><span class="tag">Required</span></li>
-          <li><div><h4>Retroactive eligibility</h4><p>Patients can apply for HSN coverage retroactively for services already received, even after a bill has been issued.</p></div><span class="tag">Protected</span></li>
-          <li><div><h4>No immigration status barrier</h4><p>The Health Safety Net does not require immigration documentation for coverage — eligibility is based on income and Massachusetts residency.</p></div><span class="tag">Protected</span></li>
-          <li><div><h4>Appeal rights</h4><p>Patients have the right to appeal a denial of HSN benefits through the Health Safety Net Office.</p></div><span class="tag">Your right</span></li>
+          <li><div><h4>Free care at 250% FPL</h4><p>Colorado's free-care threshold is higher than most states — patients at or below 250% FPL pay nothing, regardless of hospital type.</p></div><span class="tag">Required</span></li>
+          <li><div><h4>Applies to all hospitals</h4><p>HB 22-1285 applies to all Colorado hospitals, including for-profit facilities — not just nonprofits covered by federal 501(r) rules.</p></div><span class="tag">Broader coverage</span></li>
+          <li><div><h4>Cost-sharing caps</h4><p>Even for patients above the discount threshold, Colorado limits how much of their income hospitals can require as cost-sharing.</p></div><span class="tag">Protected</span></li>
+          <li><div><h4>Plain-language notice</h4><p>Hospitals must provide clear, plain-language notice of financial assistance availability in multiple languages.</p></div><span class="tag">Required</span></li>
         </ul>
 
         <div class="callout">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
-          <div><h4>MassHealth first</h4><p>Before applying for hospital charity care in Massachusetts, hospitals are required to screen you for MassHealth (Medicaid) eligibility. If you qualify for MassHealth, that covers your bills more comprehensively than charity care. The HSN then covers any remaining gaps for those who don't qualify for MassHealth.</p></div>
+          <div><h4>For-profit hospitals included</h4><p>Unlike the federal 501(r) rules, Colorado's HB 22-1285 applies to for-profit hospitals as well as nonprofit ones. If you were treated at any licensed hospital in Colorado — regardless of its tax status — you have the right to apply for financial assistance under this law.</p></div>
         </div>
 
         <div id="find-policy" class="section-head">
           <span class="eyebrow">Find your hospital's policy</span>
           <h2>How to look up a specific hospital's rules</h2>
         </div>
-        <p>The Massachusetts Health Safety Net Office, operated by the Health Policy Commission, oversees the program. You can find information at <a href="https://www.mass.gov/health-safety-net" target="_blank" rel="noopener">mass.gov/health-safety-net</a>. For individual hospital charity care policies, search the hospital's name plus "financial assistance policy" — all nonprofit hospitals must post this publicly. You can also ask the hospital's financial counselor directly about both the hospital's own charity care program and HSN eligibility in a single conversation.</p>
+        <p>The Colorado Department of Health Care Policy and Financing oversees hospital financial assistance compliance under HB 22-1285. To find your specific hospital's financial assistance policy, search the hospital's name plus "financial assistance policy" online — all hospitals in Colorado are required to post this document. You can also contact the Colorado Division of Insurance if you believe a hospital is not complying with the law's requirements.</p>
 
         <div class="tag-row">
           <a href="index.html#calculator">Check your eligibility →</a>
           <a href="how-it-works.html">Federal rules explained →</a>
-          <a href="new-york.html">New York guide →</a>
-          <a href="connecticut.html">Connecticut guide →</a>
+          <a href="washington.html">Washington guide →</a>
+          <a href="oregon.html">Oregon guide →</a>
         </div>
       </div>
 
@@ -172,8 +172,8 @@
         <h2>Where this page's claims come from</h2>
       </div>
       <ol class="sources-list">
-        <li><span>1.</span><span>Massachusetts Health Safety Net — mass.gov — <a href="https://www.mass.gov/health-safety-net" target="_blank" rel="noopener">mass.gov</a></span></li>
-        <li><span>2.</span><span>MA Health Policy Commission, HSN regulations — <a href="https://www.mass.gov/regulations/101-cmr-61300-health-safety-net-services-and-payments" target="_blank" rel="noopener">mass.gov</a></span></li>
+        <li><span>1.</span><span>Colorado HB 22-1285, bill text — <a href="https://leg.colorado.gov/bills/hb22-1285" target="_blank" rel="noopener">leg.colorado.gov</a></span></li>
+        <li><span>2.</span><span>Colorado HCPF, Hospital Financial Assistance — <a href="https://hcpf.colorado.gov/" target="_blank" rel="noopener">hcpf.colorado.gov</a></span></li>
         <li><span>3.</span><span>IRS Section 501(r) Requirements for Nonprofit Hospitals — <a href="https://www.irs.gov/charities-non-profits/charitable-organizations/requirements-for-tax-exempt-hospitals-under-section-501r" target="_blank" rel="noopener">irs.gov</a></span></li>
       </ol>
       <div class="callout callout--disclaimer" style="margin-top:1.6rem;">

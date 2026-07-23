@@ -1,10 +1,93 @@
-/about          /about.html         200
-/calculator     /calculator.html    200
-/how-it-works   /how-it-works.html  200
-/faq            /faq.html           200
-/california     /california.html    200
-/texas          /texas.html         200
-/florida        /florida.html       200
-/about          /about.html         200
-/contact        /contact.html       200
-/privacy        /privacy.html       200
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | CharityCareCheck</title>
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#1F3A35">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Primary">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-mark" aria-hidden="true">C</span>
+      CharityCareCheck
+    </a>
+    <ul class="nav__links" data-nav-links>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li class="nav__dropdown">
+        <a href="#" aria-haspopup="true">State Guides ▾</a>
+        <div class="nav__dropdown-panel">
+          <a href="california.html">California</a>
+          <a href="texas.html">Texas</a>
+          <a href="florida.html">Florida</a>
+        </div>
+      </li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="section" style="padding-top:88px; padding-bottom:96px;">
+    <div class="container container--narrow center">
+      <span class="eyebrow" style="justify-content:center;">Error 404</span>
+      <h1>That page took a wrong turn somewhere</h1>
+      <p class="text-soft" style="font-size:1.05rem; max-width:48ch; margin:0 auto 2rem;">The page you're looking for may have been moved, renamed, or never existed. Here are a few places that probably do have what you need:</p>
+
+      <div class="card-grid" style="text-align:left; margin-bottom:2.4rem;">
+        <div class="card">
+          <span class="mono-num">Start here</span>
+          <h3>Check your eligibility</h3>
+          <p>Run the free calculator and get an estimate in about two minutes.</p>
+          <a href="index.html#calculator" class="btn btn-secondary btn-sm" style="margin-top:.4rem;">Go to calculator</a>
+        </div>
+        <div class="card">
+          <span class="mono-num">Explainer</span>
+          <h3>How it works</h3>
+          <p>The federal rules behind hospital financial assistance, in plain language.</p>
+          <a href="how-it-works.html" class="btn btn-secondary btn-sm" style="margin-top:.4rem;">Read the guide</a>
+        </div>
+        <div class="card">
+          <span class="mono-num">Answers</span>
+          <h3>Frequently asked questions</h3>
+          <p>24 common questions about eligibility, applying, and billing.</p>
+          <a href="faq.html" class="btn btn-secondary btn-sm" style="margin-top:.4rem;">Browse the FAQ</a>
+        </div>
+      </div>
+
+      <a href="index.html" class="btn btn-primary">Back to homepage</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__legal">
+    <p>CharityCareCheck is not a hospital, insurer, law firm, or government agency. Content is for general educational purposes only and is not legal, medical, or financial advice.</p>
+    <p>© <span id="ccc-year">2026</span> CharityCareCheck.com</p>
+  </div>
+</footer>
+
+<script>document.getElementById('ccc-year').textContent = new Date().getFullYear();</script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

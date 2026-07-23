@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Illinois Hospital Financial Assistance & 400% FPL: Complete 2026 Guide | CharityCareCheck</title>
+<meta name="description" content="Illinois goes further than most states on hospital financial assistance. This 2026 guide explains the 210 ILCS 88 thresholds, which hospitals go to 600% FPL, how to apply, and what your rights are if denied.">
+<link rel="canonical" href="https://charitycarecheck.com/illinois-hospital-financial-assistance.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Illinois Hospital Financial Assistance 400% FPL: 2026 Guide | CharityCareCheck">
+<meta property="og:description" content="Illinois law requires free hospital care under 200% FPL and discounts up to 600% FPL at some hospitals. Full 2026 guide with income tables, how to apply, and your rights.">
+<meta property="og:url" content="https://charitycarecheck.com/illinois-hospital-financial-assistance.html">
+<meta name="theme-color" content="#1F3A35">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:image" content="https://charitycarecheck.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CharityCareCheck — Hospital Charity Care Eligibility Calculator">
+<meta name="twitter:description" content="Free 2-minute eligibility estimate for hospital financial assistance.">
+<meta name="twitter:image" content="https://charitycarecheck.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Illinois Hospital Financial Assistance & 400% FPL: Complete 2026 Guide",
+  "description": "Complete guide to Illinois hospital financial assistance for 2026: the Hospital Uninsured Patient Discount Act (210 ILCS 88), free care under 200% FPL, discounts to 600% FPL, income tables by household size, how to apply, and what to do if denied.",
+  "author": { "@type": "Person", "name": "Raguiritas" },
+  "publisher": { "@type": "Organization", "name": "CharityCareCheck" },
+  "dateModified": "2026-07-01",
+  "datePublished": "2026-07-01",
+  "mainEntityOfPage": "https://charitycarecheck.com/illinois-hospital-financial-assistance.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Illinois hospital financial assistance cover patients at 400% FPL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Illinois law requires sliding-scale discounts up to 600% FPL at many hospitals — significantly above the federal baseline. At 400% FPL, a single person earning up to $63,840 and a family of four earning up to $132,000 will likely qualify for at least some discount. The exact amount depends on the hospital's specific policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the Illinois Hospital Uninsured Patient Discount Act require?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Illinois Hospital Uninsured Patient Discount Act (210 ILCS 88) requires all licensed Illinois hospitals — including for-profit facilities — to provide 100% free care to uninsured patients under 200% FPL and meaningful sliding-scale discounts above that threshold, often to 600% FPL."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Illinois hospital financial assistance apply to for-profit hospitals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Illinois Hospital Uninsured Patient Discount Act applies to all licensed hospitals in Illinois — including for-profit facilities. This is broader than the federal 501(r) rule, which covers only nonprofit hospitals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is 400% FPL in Illinois for 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For 2026, 400% of the federal poverty level is $63,840 for a single person, $86,400 for a family of two, $108,960 for a family of three, and $132,000 for a family of four."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Primary">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-mark" aria-hidden="true">C</span>
+      CharityCareCheck
+    </a>
+    <ul class="nav__links" data-nav-links>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li class="nav__dropdown">
+        <a href="#" aria-haspopup="true">State Guides ▾</a>
+        <div class="nav__dropdown-panel">
+          <a href="california.html">California</a>
+          <a href="texas.html">Texas</a>
+          <a href="florida.html">Florida</a>
+          <a href="new-york.html">New York</a>
+          <a href="illinois.html">Illinois</a>
+          <a href="massachusetts.html">Massachusetts</a>
+          <a href="colorado.html">Colorado</a>
+          <a href="washington.html">Washington</a>
+          <a href="oregon.html">Oregon</a>
+          <a href="minnesota.html">Minnesota</a>
+          <a href="new-jersey.html">New Jersey</a>
+          <a href="connecticut.html">Connecticut</a>
+          <a href="maryland.html">Maryland</a>
+        </div>
+      </li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="container" style="padding-top:18px;">
+    <div class="ad-slot ad-slot--leaderboard" aria-label="Advertisement"></div>
+  </div>
+
+  <div class="page-header container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / <a href="illinois.html">Illinois</a> / Financial Assistance 2026</div>
+    <span class="eyebrow">Illinois · 2026 guide</span>
+    <h1>Illinois hospital financial assistance: the complete 2026 guide, including 400% and 600% FPL</h1>
+    <p>Illinois has one of the most patient-friendly hospital financial assistance laws in the country. The Hospital Uninsured Patient Discount Act goes well beyond the federal floor — requiring free care for uninsured patients under 200% FPL, meaningful discounts up to 600% FPL at many hospitals, and applying to for-profit facilities that the federal rules ignore entirely. Here is everything you need to know for 2026.</p>
+    <div class="tag-row">
+      <a href="#the-law">The law explained</a>
+      <a href="#income-tables">2026 income tables</a>
+      <a href="#for-profit">For-profit hospitals</a>
+      <a href="#chicago-hospitals">Chicago hospital programs</a>
+      <a href="#how-to-apply">How to apply</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container has-rail">
+      <div class="prose">
+
+        <div class="callout">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
+          <div><h4>The short answer for 400% FPL</h4><p>At 400% FPL, most Illinois hospital financial assistance programs will offer you a meaningful sliding-scale discount — typically 30–60% off your bill. Some hospitals extend full discounts to 400% FPL; others set their ceiling lower. The only way to know your specific hospital's tiers is to read its published Financial Assistance Policy. Use our calculator to estimate your eligibility, then apply directly to the hospital.</p></div>
+        </div>
+
+        <div id="the-law" class="section-head">
+          <span class="eyebrow">The law explained</span>
+          <h2>The Illinois Hospital Uninsured Patient Discount Act (210 ILCS 88)</h2>
+        </div>
+
+        <p>Enacted in 2005 and amended multiple times since, the Illinois Hospital Uninsured Patient Discount Act (210 ILCS 88) requires all licensed Illinois hospitals to provide financial assistance to uninsured patients who cannot afford their hospital bills. It operates alongside — and in many ways exceeds — the federal 501(r) requirements that apply only to nonprofit hospitals.</p>
+
+        <p>Here is what makes Illinois's law distinctive compared to the federal baseline:</p>
+
+        <div class="card-grid">
+          <div class="card">
+            <span class="mono-num">01</span>
+            <h3>Applies to all hospitals</h3>
+            <p>The Illinois Act covers all licensed hospitals — nonprofit, for-profit, and government-operated. The federal 501(r) rule covers only 501(c)(3) nonprofits. This means if you were treated at a for-profit hospital in Illinois, you still have legal rights to financial assistance.</p>
+          </div>
+          <div class="card">
+            <span class="mono-num">02</span>
+            <h3>Free care under 200% FPL</h3>
+            <p>The law mandates 100% free care for uninsured patients at or below 200% of the federal poverty level. This is not discretionary — it is a floor that every Illinois hospital must meet.</p>
+          </div>
+          <div class="card">
+            <span class="mono-num">03</span>
+            <h3>Discounts up to 600% FPL</h3>
+            <p>Many Illinois hospitals extend sliding-scale discounts well above the standard federal floor — up to 600% FPL at some facilities. This is one of the highest upper thresholds of any state in the country.</p>
+          </div>
+          <div class="card">
+            <span class="mono-num">04</span>
+            <h3>Written notice at admission</h3>
+            <p>Illinois hospitals must inform patients in writing about the availability of financial assistance at or before the time of service — you don't have to know to ask.</p>
+          </div>
+        </div>
+
+        <div id="income-tables" class="section-head">
+          <span class="eyebrow">2026 income tables</span>
+          <h2>Illinois financial assistance income limits for 2026</h2>
+        </div>
+
+        <p>The following tables show what the federal poverty level thresholds mean in actual dollar terms for 2026, and what you can typically expect at each income level in Illinois.</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Household size</th>
+                <th>200% FPL (free care floor)</th>
+                <th>300% FPL</th>
+                <th>400% FPL</th>
+                <th>600% FPL (upper range)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1 person</td><td>$31,920</td><td>$47,880</td><td>$63,840</td><td>$95,760</td></tr>
+              <tr><td>2 people</td><td>$43,200</td><td>$64,800</td><td>$86,400</td><td>$129,600</td></tr>
+              <tr><td>3 people</td><td>$54,480</td><td>$81,720</td><td>$108,960</td><td>$163,440</td></tr>
+              <tr><td>4 people</td><td>$66,000</td><td>$99,000</td><td>$132,000</td><td>$198,000</td></tr>
+              <tr><td>5 people</td><td>$77,280</td><td>$115,920</td><td>$154,560</td><td>$231,840</td></tr>
+              <tr><td>6 people</td><td>$88,560</td><td>$132,840</td><td>$177,120</td><td>$265,680</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Notice the 600% FPL column. For a family of four, 600% FPL in 2026 is $198,000 per year. That means a family earning close to $200,000 may still qualify for at least some financial assistance at certain Illinois hospitals — a range that is virtually unmatched anywhere else in the country.</p>
+
+        <h3>What you can expect at each income level</h3>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Income range</th><th>What Illinois law requires</th><th>What many hospitals offer voluntarily</th></tr></thead>
+            <tbody>
+              <tr><td>Under 200% FPL</td><td>100% free care — mandatory</td><td>Same</td></tr>
+              <tr><td>200%–300% FPL</td><td>Meaningful discount required</td><td>Often 50–75% discount</td></tr>
+              <tr><td>300%–400% FPL</td><td>Discount available at most hospitals</td><td>Often 25–50% discount</td></tr>
+              <tr><td>400%–600% FPL</td><td>Discount at many hospitals (not all)</td><td>10–30% discount, varies widely</td></tr>
+              <tr><td>Above 600% FPL</td><td>No state mandate</td><td>Payment plan available at most hospitals</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="ad-slot ad-slot--incontent" aria-label="Advertisement"></div>
+
+        <div id="for-profit" class="section-head">
+          <span class="eyebrow">For-profit hospitals</span>
+          <h2>Illinois for-profit hospitals: your rights are the same</h2>
+        </div>
+
+        <p>This is the detail that surprises most Illinois patients: <strong>for-profit hospitals in Illinois are subject to the same financial assistance requirements as nonprofits.</strong> The federal 501(r) rules only cover nonprofit 501(c)(3) hospitals — but Illinois's Hospital Uninsured Patient Discount Act applies to every licensed hospital, regardless of tax status.</p>
+
+        <p>What this means practically:</p>
+        <ul>
+          <li>If you were treated at a for-profit hospital like AMITA Health (now Ascension Illinois), Northwestern Medicine, or any other licensed Illinois hospital, you have the legal right to apply for financial assistance under state law.</li>
+          <li>The hospital must provide the same minimum free care under 200% FPL and sliding-scale discounts as a nonprofit hospital.</li>
+          <li>The hospital must inform you of this right in writing at admission.</li>
+          <li>If the hospital does not have a financial assistance policy posted or refuses to accept your application, it may be violating Illinois law — which you can report to the Illinois Attorney General's consumer protection division.</li>
+        </ul>
+
+        <div id="chicago-hospitals" class="section-head">
+          <span class="eyebrow">Chicago's major systems</span>
+          <h2>Financial assistance at Chicago's largest hospital systems</h2>
+        </div>
+
+        <p>Chicago's largest hospital systems all maintain financial assistance programs that meet or exceed Illinois law. Here is a summary of what the major systems typically offer — always verify current details with the specific hospital before applying:</p>
+
+        <ul class="ledger-list">
+          <li>
+            <div>
+              <h4>University of Chicago Medicine</h4>
+              <p>UChicago Medicine's financial assistance program generally provides free care to patients under 200% FPL and sliding-scale discounts to patients up to 400% FPL. They also have a medical hardship provision for patients above the standard threshold with catastrophic bills. Apply through their patient financial services department.</p>
+            </div>
+            <span class="tag">Up to 400% FPL</span>
+          </li>
+          <li>
+            <div>
+              <h4>Northwestern Memorial Hospital</h4>
+              <p>Northwestern's financial assistance program extends discounts to patients at or below 400% FPL, with full free care under 200% FPL. They have a dedicated financial counseling team and a straightforward application process available online and in person.</p>
+            </div>
+            <span class="tag">Up to 400% FPL</span>
+          </li>
+          <li>
+            <div>
+              <h4>Rush University Medical Center</h4>
+              <p>Rush provides free care to patients under 200% FPL and sliding-scale discounts up to 400% FPL. They also offer extended payment plans for patients above the discount threshold.</p>
+            </div>
+            <span class="tag">Up to 400% FPL</span>
+          </li>
+          <li>
+            <div>
+              <h4>Cook County Health (Stroger Hospital, Provident Hospital)</h4>
+              <p>Cook County Health is the public hospital system serving Chicago. It operates a sliding-scale fee program based on income — patients under 200% FPL pay little or nothing. Cook County Health also serves patients regardless of immigration status or insurance situation.</p>
+            </div>
+            <span class="tag">Public system — broadest access</span>
+          </li>
+        </ul>
+
+        <div id="how-to-apply" class="section-head">
+          <span class="eyebrow">How to apply</span>
+          <h2>Step-by-step: applying for Illinois hospital financial assistance</h2>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <h4>Request an itemized bill</h4>
+            <p>Before anything else, call the hospital and request a fully itemized statement of your charges. Illinois hospital bills — particularly from large Chicago systems — commonly contain errors. A billing error caught before you apply reduces your balance before any discount is applied, maximizing your savings.</p>
+          </li>
+          <li>
+            <h4>Find the hospital's Financial Assistance Policy</h4>
+            <p>Go to the hospital's website and search "financial assistance" or "charity care." Illinois requires all hospitals to post their policies publicly. The FAP will tell you the exact income tiers the hospital uses — compare them against the 2026 income table above to see where you fall.</p>
+          </li>
+          <li>
+            <h4>Request the application from the hospital</h4>
+            <p>Most Illinois hospitals have a dedicated patient financial services department. Call and ask for the "financial assistance application" or "uninsured patient discount application." Under Illinois law, the hospital must provide this to you at admission — but if they didn't, call the billing department and ask now.</p>
+          </li>
+          <li>
+            <h4>Gather your income documentation</h4>
+            <p>Illinois hospitals typically require recent pay stubs (2–3 months), your most recent federal tax return (1040), and any government benefit award letters. If you are self-employed, bank statements showing monthly deposits are commonly accepted. If you have no income, a signed self-attestation letter is generally accepted — the hospital cannot require documentation that does not exist for your situation.</p>
+          </li>
+          <li>
+            <h4>Submit and follow up</h4>
+            <p>Submit the completed application with all documentation. Keep photocopies of everything. Submit by certified mail if mailing, or ask for a dated receipt if submitting in person. Follow up after 2–3 weeks to confirm receipt and processing. Ask for the name of your case handler and a case reference number.</p>
+          </li>
+          <li>
+            <h4>Know your 240-day window</h4>
+            <p>At nonprofit Illinois hospitals, the federal 501(r) rule gives you at least 240 days from your first post-discharge bill to apply. Do not let this deadline pass. Even if you are still gathering documents, submit what you have before the deadline and note that additional documentation is forthcoming.</p>
+          </li>
+        </ol>
+
+        <div id="faq" class="section-head">
+          <span class="eyebrow">Frequently asked questions</span>
+          <h2>Illinois hospital financial assistance: common questions</h2>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>Does Illinois financial assistance cover ER visits?</h3>
+            <p>Yes. The Illinois Hospital Uninsured Patient Discount Act and the federal 501(r) rules both require that financial assistance programs cover emergency department visits. You apply after the visit — not at the time of care. See our full guide to ER charity care for details.</p>
+          </div>
+          <div class="card">
+            <h3>I have insurance but a high deductible. Can I still apply?</h3>
+            <p>Many Illinois hospitals allow underinsured patients — those with insurance but significant out-of-pocket costs — to apply for financial assistance. Ask specifically about "underinsured patient assistance" when you contact the billing department. The hospital's FAP should describe its policy on underinsured patients.</p>
+          </div>
+          <div class="card">
+            <h3>What if my household size is larger than 6 people?</h3>
+            <p>For each additional person beyond 6, add approximately $5,640 to the FPL thresholds shown in the table above. The exact figure changes slightly each year — check HHS's current poverty guidelines at aspe.hhs.gov for the most accurate current numbers.</p>
+          </div>
+          <div class="card">
+            <h3>Can a for-profit hospital in Illinois deny my application without reason?</h3>
+            <p>No. Illinois law requires all licensed hospitals to maintain financial assistance programs. If a for-profit hospital denies your application, ask for the denial in writing with the specific reason. If the hospital is violating state law, contact the Illinois Attorney General's office or the Illinois Department of Public Health.</p>
+          </div>
+          <div class="card">
+            <h3>What is Medicaid in Illinois and should I apply first?</h3>
+            <p>Illinois Medicaid is called "Illinois Medical Assistance" and covers a broad range of residents, including adults without children under the ACA expansion. If you earn under approximately 138% FPL, you may qualify for Medicaid, which covers bills more comprehensively than hospital financial assistance. Apply for Medicaid first at abe.illinois.gov, then apply for hospital financial assistance if you don't qualify or while your Medicaid application is pending.</p>
+          </div>
+          <div class="card">
+            <h3>Will applying affect my credit score?</h3>
+            <p>No — applying for financial assistance does not affect your credit. Submitting an application pauses collections and adverse credit reporting at nonprofit hospitals under federal law. At for-profit hospitals in Illinois, the state law requires similar protections. Your credit is only at risk if you don't apply and the debt goes to collections.</p>
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <a href="index.html#calculator">Check your eligibility →</a>
+          <a href="illinois.html">Illinois state guide →</a>
+          <a href="does-charity-care-cover-er-visits.html">Does charity care cover ER visits? →</a>
+          <a href="charity-care-application-denied.html">What to do if denied →</a>
+        </div>
+
+      </div>
+
+      <aside class="ad-rail">
+        <div class="ad-slot ad-slot--sidebar" aria-label="Advertisement"></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container container--narrow">
+      <div class="section-head">
+        <span class="eyebrow">Sources</span>
+        <h2>Where this page's claims come from</h2>
+      </div>
+      <ol class="sources-list">
+        <li><span>1.</span><span>Illinois Hospital Uninsured Patient Discount Act, 210 ILCS 88 — <a href="https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2805&ChapterID=22" target="_blank" rel="noopener">ilga.gov</a></span></li>
+        <li><span>2.</span><span>Illinois Attorney General, Patient Rights — <a href="https://illinoisattorneygeneral.gov/consumers/health-care-rights/" target="_blank" rel="noopener">illinoisattorneygeneral.gov</a></span></li>
+        <li><span>3.</span><span>IRS Section 501(r) — Requirements for Tax-Exempt Hospitals — <a href="https://www.irs.gov/charities-non-profits/charitable-organizations/requirements-for-tax-exempt-hospitals-under-section-501r" target="_blank" rel="noopener">irs.gov</a></span></li>
+        <li><span>4.</span><span>HHS 2026 Federal Poverty Guidelines — <a href="https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines" target="_blank" rel="noopener">aspe.hhs.gov</a></span></li>
+        <li><span>5.</span><span>Illinois Medical Assistance — ABE Application Portal — <a href="https://abe.illinois.gov" target="_blank" rel="noopener">abe.illinois.gov</a></span></li>
+      </ol>
+      <div class="callout callout--disclaimer" style="margin-top:1.6rem;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M11 11h1v5h1"/></svg>
+        <div><h4>General information, not legal advice</h4><p>Hospital policies and Illinois state law change over time. Income figures use 2026 federal poverty guidelines. Verify your specific hospital's current Financial Assistance Policy before relying on this guide for a decision. For large billing disputes, consider contacting the Illinois Attorney General's office or a free legal aid organization.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <div class="site-footer__brand">CharityCareCheck</div>
+      <p style="max-width:32ch; font-size:.9rem;">A free, independent guide to hospital financial assistance and charity care rules in the United States.</p>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Related guides</h5>
+      <ul>
+        <li><a href="illinois.html">Illinois state guide</a></li>
+        <li><a href="does-charity-care-cover-er-visits.html">ER visit coverage</a></li>
+        <li><a href="charity-care-application-denied.html">If you're denied</a></li>
+        <li><a href="new-york-charity-care-eligibility-2026.html">New York guide</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="about.html">Editorial Process</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container site-footer__legal">
+    <p>CharityCareCheck is not a hospital, insurer, law firm, or government agency. Content is for general educational purposes only and is not legal, medical, or financial advice.</p>
+    <p>© <span id="ccc-year">2026</span> CharityCareCheck.com · Published July 2026</p>
+  </div>
+</footer>
+
+<script>document.getElementById('ccc-year').textContent = new Date().getFullYear();</script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

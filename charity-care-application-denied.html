@@ -3,414 +3,1742 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Charity Care Application Denied? Here's Exactly What to Do Next | CharityCareCheck</title>
-<meta name="description" content="If your hospital charity care application was denied, don't give up. This step-by-step guide explains the most common denial reasons, how to appeal, how to escalate, and your legal rights.">
-<link rel="canonical" href="https://www.charitycarecheck.com/charity-care-application-denied.html">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Charity Care Application Denied? What to Do Next | CharityCareCheck">
-<meta property="og:description" content="Step-by-step guide: the most common charity care denial reasons, how to appeal effectively, how to escalate if the hospital won't budge, and your legal rights.">
-<meta property="og:url" content="https://www.charitycarecheck.com/charity-care-application-denied.html">
-<meta name="theme-color" content="#1F3A35">
+<title>Hospital Charity Care Eligibility Calculator | Free Care Checker</title>
+<meta name="description" content="Find out if you qualify for free or reduced hospital care. Most nonprofit hospitals offer 100% free care if you earn under 200% of the poverty level — check your eligibility in 60 seconds.">
+<meta name="robots" content="noindex, follow">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<meta property="og:image" content="https://www.charitycarecheck.com/assets/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="CharityCareCheck — Hospital Charity Care Eligibility Calculator">
-<meta name="twitter:description" content="Free 2-minute eligibility estimate for hospital financial assistance.">
-<meta name="twitter:image" content="https://www.charitycarecheck.com/assets/og-image.png">
+<!-- This page is designed to be embedded via iframe on index.html and is intentionally excluded
+     from search indexing (noindex) to avoid thin/duplicate-content competition with the homepage,
+     which contains the full educational context around this same tool. It can still be reached
+     directly and its links are still followed. -->
+
+<!-- Google AdSense -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4073124583870713" crossorigin="anonymous"></script> -->
+
+<!-- jsPDF for PDF download of dispute letter -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- Configuration data (FPL tables, state notes, sources) — update annually -->
+<script src="js/config.js"></script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Charity Care Application Denied? Here's Exactly What to Do Next",
-  "description": "A complete guide to appealing a denied hospital charity care application: understanding the denial reason, gathering stronger documentation, writing an effective appeal, escalating to the patient advocate and state health department, and finding free legal help.",
-  "author": { "@type": "Person", "name": "Raguiritas" },
-  "publisher": { "@type": "Organization", "name": "CharityCareCheck" },
-  "dateModified": "2026-07-01",
-  "datePublished": "2026-07-01",
-  "mainEntityOfPage": "https://www.charitycarecheck.com/charity-care-application-denied.html"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Can I appeal a denied charity care application?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Every nonprofit hospital's Financial Assistance Policy must include an appeal or reconsideration process. You have the right to submit additional documentation and request a formal reconsideration of your application. The hospital must tell you the specific reason for the denial so you know what to address in your appeal."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the most common reason charity care applications are denied?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The most common reasons are: income calculated above the threshold (sometimes due to errors), incomplete documentation, missed application deadline, or the hospital incorrectly classifying the patient as ineligible. Many denials are reversible with additional documentation or a formal appeal."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What do I do if the hospital refuses to reconsider my charity care denial?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Escalate beyond the billing department. Request a meeting with the hospital's patient advocate or patient representative. If that fails, file a complaint with your state's department of health. For nonprofit hospitals, you can also file a complaint with the IRS if you believe the hospital is violating its 501(r) obligations. Free legal aid organizations can also advocate on your behalf."
-      }
-    }
-  ]
-}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0F1F3D;
+    --navy-mid: #1A3260;
+    --teal: #0D9488;
+    --teal-light: #CCFBF1;
+    --amber: #F59E0B;
+    --amber-light: #FEF3C7;
+    --red: #DC2626;
+    --red-light: #FEE2E2;
+    --purple: #7C3AED;
+    --purple-light: #EDE9FE;
+    --bg: #F0F4F8;
+    --card: #FFFFFF;
+    --text: #1E293B;
+    --text-muted: #64748B;
+    --border: #E2E8F0;
+    --radius: 12px;
+    --shadow: 0 4px 24px rgba(15,31,61,0.10);
+    --shadow-lg: 0 12px 48px rgba(15,31,61,0.18);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    background: var(--navy);
+    color: white;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .header-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 24px 52px;
+    position: relative;
+    z-index: 1;
+  }
+  .trust-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 99px;
+    padding: 4px 14px 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #94D2BD;
+    margin-bottom: 20px;
+  }
+  .trust-pill span { font-size: 14px; }
+  header h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 800;
+    line-height: 1.15;
+    color: white;
+    margin-bottom: 16px;
+  }
+  header h1 em {
+    font-style: normal;
+    color: var(--amber);
+  }
+  .header-sub {
+    font-size: 17px;
+    color: #94A3B8;
+    max-width: 580px;
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+  .header-stats {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .stat-num {
+    font-family: 'Sora', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--amber);
+  }
+  .stat-label {
+    font-size: 12px;
+    color: #64748B;
+    letter-spacing: 0.03em;
+  }
+  .header-bg-shape {
+    position: absolute;
+    right: -60px;
+    top: -80px;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(13,148,136,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* ─── MAIN LAYOUT ─── */
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+
+  /* ─── ADSENSE SLOT ─── */
+  .ad-slot {
+    background: var(--card);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-bottom: 24px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ─── PROGRESS ─── */
+  .progress-bar-wrap {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+  .progress-steps {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  .step-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+  }
+  .step-item:last-child { flex: 0; }
+  .step-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    background: var(--border);
+    color: var(--text-muted);
+  }
+  .step-circle.active { background: var(--navy); color: white; }
+  .step-circle.done { background: var(--teal); color: white; }
+  .step-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+  .step-label.active { color: var(--navy); }
+  .step-label.done { color: var(--teal); }
+  .step-line {
+    flex: 1;
+    height: 2px;
+    background: var(--border);
+    margin: 0 8px;
+    transition: background 0.3s;
+  }
+  .step-line.done { background: var(--teal); }
+  @media (max-width: 500px) {
+    .step-label { display: none; }
+  }
+
+  /* ─── CARD ─── */
+  .card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+  }
+  @media (max-width: 600px) {
+    .card { padding: 20px 16px; }
+  }
+  .card-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .card-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+  }
+
+  /* ─── FORM ELEMENTS ─── */
+  .field-group {
+    display: grid;
+    gap: 20px;
+  }
+  .field-group.two-col {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 580px) {
+    .field-group.two-col { grid-template-columns: 1fr; }
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  label .req { color: var(--red); margin-left: 2px; }
+  label .hint {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-left: 6px;
+  }
+  select, input[type="number"], input[type="text"] {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    padding: 11px 14px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    background: white;
+    transition: border-color 0.2s;
+    width: 100%;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+  }
+  select:focus, input:focus {
+    border-color: var(--navy);
+  }
+  .input-prefix-wrap {
+    position: relative;
+  }
+  .input-prefix {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-muted);
+    pointer-events: none;
+  }
+  .input-prefix-wrap input {
+    padding-left: 28px;
+  }
+
+  /* ─── LIVE PREVIEW ─── */
+  .live-preview {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .live-preview-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748B;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .live-savings {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--amber);
+    line-height: 1;
+    transition: color 0.3s ease;
+  }
+  .live-savings.pulse { animation: numRefresh 0.35s ease; }
+  @keyframes numRefresh {
+    0%   { opacity: 1;    transform: translateY(0); }
+    30%  { opacity: 0.45; transform: translateY(-3px); }
+    100% { opacity: 1;    transform: translateY(0); }
+  }
+  .live-fpl-badge {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 10px 16px;
+    color: white;
+  }
+  .live-fpl-pct {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .live-fpl-label { font-size: 11px; color: #94A3B8; margin-top: 2px; }
+
+  /* ─── CHECKBOXES ─── */
+  .check-group {
+    display: grid;
+    gap: 10px;
+    margin-top: 4px;
+  }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .check-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: var(--navy);
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .check-text {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .check-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 1px;
+  }
+
+  /* ─── BUTTONS ─── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--navy);
+    color: white;
+    font-family: 'Sora', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .btn-primary:hover { background: var(--navy-mid); transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .btn-secondary:hover { color: var(--navy); }
+
+  /* ─── RESULTS ─── */
+  #results { display: none; }
+
+  .result-hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    border-radius: var(--radius);
+    padding: 36px 32px;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .result-hero::before {
+    content: '';
+    position: absolute;
+    right: -40px;
+    bottom: -60px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(13,148,136,0.15);
+    pointer-events: none;
+  }
+  .result-tier-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .tier-free { background: rgba(13,148,136,0.25); color: #5EEAD4; border: 1px solid rgba(13,148,136,0.4); }
+  .tier-partial { background: rgba(245,158,11,0.2); color: #FCD34D; border: 1px solid rgba(245,158,11,0.4); }
+  .tier-negotiate { background: rgba(124,58,237,0.2); color: #C4B5FD; border: 1px solid rgba(124,58,237,0.4); }
+  .tier-limited { background: rgba(220,38,38,0.15); color: #FCA5A5; border: 1px solid rgba(220,38,38,0.3); }
+
+  .result-headline {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .result-headline .savings-highlight {
+    color: var(--amber);
+  }
+  .result-summary {
+    font-size: 15px;
+    color: #94A3B8;
+    max-width: 520px;
+    line-height: 1.6;
+  }
+
+  .result-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+  }
+  @media (max-width: 580px) {
+    .result-metrics { grid-template-columns: 1fr 1fr; }
+  }
+  .metric-box {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .metric-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    line-height: 1;
+  }
+  .metric-label { font-size: 11px; color: #64748B; margin-top: 4px; }
+
+  /* ─── RESULT PANELS ─── */
+  .result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 640px) {
+    .result-grid { grid-template-columns: 1fr; }
+  }
+
+  .panel {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+  }
+  .panel-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .panel-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .icon-teal { background: var(--teal-light); }
+  .icon-amber { background: var(--amber-light); }
+  .icon-purple { background: var(--purple-light); }
+  .icon-red { background: var(--red-light); }
+
+  /* ─── CHECKLIST ─── */
+  .checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.45;
+  }
+  .checklist-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    margin-top: 1px;
+  }
+  .dot-teal { background: var(--teal-light); color: var(--teal); }
+  .dot-amber { background: var(--amber-light); color: #92400E; }
+
+  /* ─── HOSPITAL TYPE ─── */
+  .hospital-compare {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hospital-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .hospital-row.highlight { background: var(--teal-light); border-color: #99F6E4; }
+  .hospital-row-label { font-weight: 600; color: var(--text); }
+  .hospital-row-val { color: var(--text-muted); }
+  .badge-small {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 99px;
+    letter-spacing: 0.03em;
+  }
+  .badge-green { background: var(--teal-light); color: #0F766E; }
+  .badge-red { background: var(--red-light); color: var(--red); }
+  .badge-amber { background: var(--amber-light); color: #92400E; }
+
+  /* ─── LETTER ─── */
+  .letter-wrap {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .letter-header {
+    background: var(--navy);
+    color: white;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .letter-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .btn-copy {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-copy:hover { background: rgba(255,255,255,0.25); }
+  .letter-body {
+    padding: 24px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text);
+    white-space: pre-wrap;
+    font-family: 'Georgia', serif;
+    max-height: 320px;
+    overflow-y: auto;
+    background: #FAFBFC;
+    border-bottom: 1px solid var(--border);
+  }
+  .letter-footer {
+    padding: 12px 24px;
+    font-size: 12px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ─── NEXT STEPS ─── */
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .step-row {
+    display: flex;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .step-row:last-child { border-bottom: none; }
+  .step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: white;
+    font-family: 'Sora', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .step-row-content { flex: 1; }
+  .step-row-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 3px;
+  }
+  .step-row-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  .step-row-time {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--teal);
+    margin-top: 4px;
+  }
+
+  /* ─── DISCLAIMER ─── */
+  .disclaimer {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-top: 8px;
+    border-left: 4px solid var(--border);
+  }
+  .disclaimer p {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+  .disclaimer strong { color: var(--text); }
+
+  /* ─── SHARE ─── */
+  .share-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 20px 24px;
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+  }
+  .share-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-right: 4px;
+  }
+  .share-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .share-btn:hover { opacity: 0.85; }
+  .share-reddit { background: #FF4500; color: white; }
+  .share-copy { background: var(--border); color: var(--text); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy);
+    color: #64748B;
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-top: 40px;
+  }
+  footer a { color: #94A3B8; text-decoration: none; }
+  footer a:hover { color: white; }
+
+  /* ─── UTILITY ─── */
+  .hidden { display: none !important; }
+  .mt-8 { margin-top: 8px; }
+  .mt-16 { margin-top: 16px; }
+  .error-msg {
+    font-size: 12px;
+    color: var(--red);
+    margin-top: 4px;
+    display: none;
+  }
+  .field.has-error input, .field.has-error select { border-color: var(--red); }
+  .field.has-error .error-msg { display: block; }
+
+  .info-box {
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1E40AF;
+    line-height: 1.5;
+    margin-top: 12px;
+  }
+  .info-box strong { font-weight: 700; }
+
+  /* ─── SOURCES SECTION ─── */
+  .sources-section {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    margin-top: 16px;
+    box-shadow: var(--shadow);
+    border-top: 3px solid var(--navy);
+  }
+  .sources-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sources-subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .sources-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  @media (max-width: 600px) {
+    .sources-grid { grid-template-columns: 1fr; }
+  }
+  .source-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .source-item:hover {
+    border-color: var(--navy);
+    background: #F8FAFF;
+  }
+  .source-item-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.35;
+  }
+  .source-item-desc {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.45;
+  }
+  .source-item-org {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+  }
+
+  /* ─── PDF BUTTON ─── */
+  .btn-pdf {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-pdf:hover { background: rgba(255,255,255,0.25); }
+
+  @media print {
+    header, .progress-bar-wrap, .ad-slot, .share-row, footer, #step1, #step2, #step3 { display: none !important; }
+    #results { display: block !important; }
+  }
+</style>
 </head>
 <body>
 
-<header class="site-header">
-  <nav class="nav container" aria-label="Primary">
-    <a href="index.html" class="nav__logo">
-      <span class="nav__logo-mark" aria-hidden="true">C</span>
-      CharityCareCheck
-    </a>
-    <ul class="nav__links" data-nav-links>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="how-it-works.html">How It Works</a></li>
-      <li class="nav__dropdown">
-        <a href="#" aria-haspopup="true">State Guides ▾</a>
-        <div class="nav__dropdown-panel">
-          <a href="california.html">California</a>
-          <a href="texas.html">Texas</a>
-          <a href="florida.html">Florida</a>
-          <a href="new-york.html">New York</a>
-          <a href="illinois.html">Illinois</a>
-          <a href="massachusetts.html">Massachusetts</a>
-          <a href="colorado.html">Colorado</a>
-          <a href="washington.html">Washington</a>
-          <a href="oregon.html">Oregon</a>
-          <a href="minnesota.html">Minnesota</a>
-          <a href="new-jersey.html">New Jersey</a>
-          <a href="connecticut.html">Connecticut</a>
-          <a href="maryland.html">Maryland</a>
-        </div>
-      </li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="privacy.html">Privacy</a></li>
-    </ul>
-    <div class="nav__actions">
-      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
-      </button>
-      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
+<header>
+  <div class="header-bg-shape"></div>
+  <div class="header-inner">
+    <div class="trust-pill"><span>🏥</span> Free Tool · No Signup Required</div>
+    <h1>Do You Qualify for <em>Free</em> Hospital Care?</h1>
+    <p class="header-sub">Most nonprofit hospitals are legally required to provide free or reduced-cost care to low-income patients — but 75% of eligible patients never apply. Check your eligibility in under 60 seconds.</p>
+    <div class="header-stats">
+      <div class="stat">
+        <span class="stat-num">$745B</span>
+        <span class="stat-label">Hospital revenue in 2023</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">~2%</span>
+        <span class="stat-label">Provided as charity care</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">$66K</span>
+        <span class="stat-label">Income limit for free care (family of 4)</span>
+      </div>
     </div>
-  </nav>
+  </div>
 </header>
 
 <main>
-  <div class="container" style="padding-top:18px;">
-    <div class="ad-slot ad-slot--leaderboard" aria-label="Advertisement"></div>
+
+  <!-- AdSense Top — responsive leaderboard/banner -->
+  <div class="ad-slot" id="ad-top">
+    <!-- REPLACE the inner comment with your live ad unit once approved:
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-4073124583870713"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+    <span style="font-size:12px;color:var(--text-muted);">Advertisement</span>
   </div>
 
-  <div class="page-header container">
-    <div class="breadcrumb"><a href="index.html">Home</a> / Charity Care Application Denied</div>
-    <span class="eyebrow">After a denial</span>
-    <h1>Charity care application denied? Here is exactly what to do next</h1>
-    <p>A denial letter from a hospital is not the end of the road — it is often the beginning of a negotiation. Many denials are based on incomplete documentation, income calculation errors, or billing department mistakes that are entirely reversible on appeal. This guide walks you through every step, from understanding why you were denied to escalating to state regulators if the hospital refuses to reconsider.</p>
-    <div class="tag-row">
-      <a href="#first-steps">First steps</a>
-      <a href="#denial-reasons">Common denial reasons</a>
-      <a href="#appeal">How to appeal</a>
-      <a href="#escalate">How to escalate</a>
-      <a href="#hardship">Medical hardship</a>
-      <a href="#legal-help">Free legal help</a>
+  <!-- Progress Bar -->
+  <div class="progress-bar-wrap">
+    <div class="progress-steps">
+      <div class="step-item">
+        <div class="step-circle active" id="sc1">1</div>
+        <span class="step-label active" id="sl1">Your Household</span>
+      </div>
+      <div class="step-line" id="line1"></div>
+      <div class="step-item">
+        <div class="step-circle" id="sc2">2</div>
+        <span class="step-label" id="sl2">Hospital Info</span>
+      </div>
+      <div class="step-line" id="line2"></div>
+      <div class="step-item">
+        <div class="step-circle" id="sc3">3</div>
+        <span class="step-label" id="sl3">Your Situation</span>
+      </div>
+      <div class="step-line" id="line3"></div>
+      <div class="step-item">
+        <div class="step-circle" id="sc4">✓</div>
+        <span class="step-label" id="sl4">Results</span>
+      </div>
     </div>
   </div>
 
-  <section class="section">
-    <div class="container has-rail">
-      <div class="prose">
-
-        <div class="callout">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
-          <div><h4>Don't give up after a first denial</h4><p>Research consistently shows that a significant percentage of initial charity care denials are overturned on appeal — particularly when the applicant submits additional documentation or corrects an income calculation error. A denial letter is the hospital's first word, not its last.</p></div>
+  <!-- ─── STEP 1: Household ─── -->
+  <div id="step1">
+    <div class="card">
+      <div class="card-title">Tell us about your household</div>
+      <p class="card-desc">This determines your Federal Poverty Level (FPL) percentage — the key number hospitals use to set charity care thresholds.</p>
+      <div class="field-group two-col">
+        <div class="field" id="f-state">
+          <label>Your State <span class="req">*</span></label>
+          <select id="state">
+            <option value="">Select your state…</option>
+            <option>Alabama</option><option>Alaska</option><option>Arizona</option>
+            <option>Arkansas</option><option>California</option><option>Colorado</option>
+            <option>Connecticut</option><option>Delaware</option><option>Florida</option>
+            <option>Georgia</option><option>Hawaii</option><option>Idaho</option>
+            <option>Illinois</option><option>Indiana</option><option>Iowa</option>
+            <option>Kansas</option><option>Kentucky</option><option>Louisiana</option>
+            <option>Maine</option><option>Maryland</option><option>Massachusetts</option>
+            <option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
+            <option>Missouri</option><option>Montana</option><option>Nebraska</option>
+            <option>Nevada</option><option>New Hampshire</option><option>New Jersey</option>
+            <option>New Mexico</option><option>New York</option><option>North Carolina</option>
+            <option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
+            <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option>
+            <option>South Carolina</option><option>South Dakota</option><option>Tennessee</option>
+            <option>Texas</option><option>Utah</option><option>Vermont</option>
+            <option>Virginia</option><option>Washington</option><option>West Virginia</option>
+            <option>Wisconsin</option><option>Wyoming</option>
+            <option>Alaska</option><option>Hawaii</option>
+          </select>
+          <span class="error-msg">Please select your state</span>
         </div>
-
-        <div id="first-steps" class="section-head">
-          <span class="eyebrow">First steps</span>
-          <h2>What to do the moment you receive a denial</h2>
+        <div class="field" id="f-size">
+          <label>Household Size <span class="req">*</span> <span class="hint">(all who share income)</span></label>
+          <select id="household-size">
+            <option value="">Select…</option>
+            <option value="1">1 person (just me)</option>
+            <option value="2">2 people</option>
+            <option value="3">3 people</option>
+            <option value="4">4 people</option>
+            <option value="5">5 people</option>
+            <option value="6">6 people</option>
+            <option value="7">7 people</option>
+            <option value="8">8 people</option>
+          </select>
+          <span class="error-msg">Please select household size</span>
         </div>
-
-        <ol class="steps">
-          <li>
-            <h4>Do not pay the full bill and do not ignore it</h4>
-            <p>Paying the full bill immediately after a denial can actually hurt your appeal — it signals that you accepted the outcome. And ignoring it risks collections action. Instead, call the billing department, tell them you received the denial and intend to appeal, and ask them to note this in your file. Ask specifically: "Will collections be paused while I go through the appeal process?" In most cases, the answer should be yes.</p>
-          </li>
-          <li>
-            <h4>Get the denial reason in writing</h4>
-            <p>If you received a verbal denial or a denial letter that doesn't clearly state the reason, call the billing department and ask for the specific denial reason in writing. They are required to tell you. The denial reason determines your entire appeal strategy — you cannot fix a problem you don't understand.</p>
-          </li>
-          <li>
-            <h4>Note the date and start your appeal clock</h4>
-            <p>Most hospitals have an appeal window — typically 30 to 60 days from the denial date. Note this deadline and mark it on your calendar. You also still have the protection of the overall 240-day application window from your first bill, which runs separately. Do not let either deadline pass without acting.</p>
-          </li>
-          <li>
-            <h4>Read the hospital's Financial Assistance Policy</h4>
-            <p>Download the hospital's FAP from its website. Read the section on appeals or reconsideration — it will describe the hospital's specific appeal process, what documentation to submit, and who to address the appeal to. If the appeal process is not described, the hospital may be violating its 501(r) obligations — note this for escalation.</p>
-          </li>
-        </ol>
-
-        <div id="denial-reasons" class="section-head">
-          <span class="eyebrow">Common denial reasons</span>
-          <h2>The most common charity care denial reasons — and whether they're valid</h2>
+        <div class="field" id="f-income">
+          <label>Annual Household Income <span class="req">*</span></label>
+          <div class="input-prefix-wrap">
+            <span class="input-prefix">$</span>
+            <input type="number" id="annual-income" placeholder="e.g. 45000" min="0" max="999999">
+          </div>
+          <span class="error-msg">Please enter your annual income</span>
         </div>
-
-        <ul class="ledger-list">
-          <li>
-            <div>
-              <h4>Income calculated above the threshold</h4>
-              <p>This is the most common denial reason — and the most frequently wrong. Check: Did the hospital count your gross income or net income? Did they include income from household members who shouldn't be counted? Did they use an old tax return that doesn't reflect your current income? Did they count one-time income (a bonus, an inheritance) as recurring? Any of these errors can be corrected on appeal with better documentation.</p>
-            </div>
-            <span class="tag">Often reversible</span>
-          </li>
-          <li>
-            <div>
-              <h4>Incomplete application</h4>
-              <p>If your application was missing a required document, the hospital should have contacted you to request it — not simply denied you. If they denied you without reaching out, appeal on this basis and submit the missing documentation with your appeal letter.</p>
-            </div>
-            <span class="tag">Usually reversible</span>
-          </li>
-          <li>
-            <div>
-              <h4>Missed the application deadline</h4>
-              <p>Under federal law, the application window is at least 240 days from the first post-discharge bill. If you applied within 240 days and the hospital claims you missed a deadline, cite the federal regulation in your appeal. A hospital cannot shorten the 240-day window with its own internal policy.</p>
-            </div>
-            <span class="tag">Often invalid — cite 501(r)</span>
-          </li>
-          <li>
-            <div>
-              <h4>Documentation format not accepted</h4>
-              <p>Some hospitals claim they will only accept certain documentation formats. However, a hospital cannot deny you solely because you provided income documentation in a different format than requested, as long as the documentation verifies your income. If you had no tax return, bank statements or a signed self-attestation should be accepted.</p>
-            </div>
-            <span class="tag">May be invalid</span>
-          </li>
-          <li>
-            <div>
-              <h4>Genuinely above the income threshold</h4>
-              <p>If your income is genuinely above the hospital's stated eligibility thresholds after recalculation, this is a valid denial reason. However, see the Medical Hardship section below — there may still be a pathway to assistance based on the size of your bill relative to your income.</p>
-            </div>
-            <span class="tag">Valid — but see hardship section</span>
-          </li>
-        </ul>
-
-        <div class="ad-slot ad-slot--incontent" aria-label="Advertisement"></div>
-
-        <div id="appeal" class="section-head">
-          <span class="eyebrow">How to appeal</span>
-          <h2>Writing an effective charity care appeal letter</h2>
-        </div>
-
-        <p>A written appeal is more effective than a phone call — it creates a paper trail, forces the hospital to respond formally, and signals that you are serious. Here is what your appeal letter should include:</p>
-
-        <div class="card-grid">
-          <div class="card">
-            <span class="mono-num">01</span>
-            <h3>Your account information</h3>
-            <p>Name, date of birth, account number, date of service, and the date of the denial letter. This ensures your letter reaches the right file immediately.</p>
-          </div>
-          <div class="card">
-            <span class="mono-num">02</span>
-            <h3>A clear statement of appeal</h3>
-            <p>State plainly: "I am writing to formally appeal the denial of my financial assistance application dated [date]. I am requesting a full reconsideration."</p>
-          </div>
-          <div class="card">
-            <span class="mono-num">03</span>
-            <h3>The specific reason you are appealing</h3>
-            <p>Address the denial reason directly. If the income was calculated incorrectly, show the correct calculation. If documentation was missing, explain why and provide it now.</p>
-          </div>
-          <div class="card">
-            <span class="mono-num">04</span>
-            <h3>Supporting documentation</h3>
-            <p>Include everything relevant: corrected pay stubs, updated tax information, a benefits letter, a self-attestation. More documentation is better than less. Label each exhibit clearly.</p>
-          </div>
-          <div class="card">
-            <span class="mono-num">05</span>
-            <h3>A request for written response</h3>
-            <p>Ask explicitly for a written response within a specific timeframe — 14 to 21 business days is reasonable. "I respectfully request a written decision on my appeal within 21 business days."</p>
-          </div>
-          <div class="card">
-            <span class="mono-num">06</span>
-            <h3>A collections pause request</h3>
-            <p>Include a sentence asking the hospital to pause all collection activity — calls, letters, referrals to agencies — while your appeal is under review. "I also request that all collection activity be suspended during the appeal review period, consistent with your Financial Assistance Policy."</p>
+        <div class="field" id="f-bill">
+          <label>Approximate Hospital Bill <span class="hint">(optional)</span></label>
+          <div class="input-prefix-wrap">
+            <span class="input-prefix">$</span>
+            <input type="number" id="hospital-bill" placeholder="e.g. 12000" min="0">
           </div>
         </div>
-
-        <p>Send the appeal letter by certified mail with return receipt requested, so you have proof of delivery. Keep a copy of everything. Address it to the hospital's financial assistance office or patient financial services department — not general billing.</p>
-
-        <div id="escalate" class="section-head">
-          <span class="eyebrow">How to escalate</span>
-          <h2>When to go above the billing department</h2>
-        </div>
-
-        <p>If your written appeal to the billing department is denied or ignored, escalate in this order:</p>
-
-        <ol class="steps">
-          <li>
-            <h4>Request the hospital patient advocate</h4>
-            <p>Every hospital is required to have a patient advocate or patient representative — someone whose job is to help patients navigate the hospital system independently of the billing department. Call the main hospital number and ask for "patient advocacy" or "patient relations." Explain your situation and ask them to review your charity care denial. Patient advocates have authority that billing clerks do not.</p>
-          </li>
-          <li>
-            <h4>Escalate to hospital administration</h4>
-            <p>If the patient advocate cannot resolve the issue, write a letter directly to the hospital's CEO or CFO. This may sound aggressive, but it is entirely appropriate. Large hospitals have executive patient liaison offices that handle exactly these situations. A well-documented letter explaining the denial, your appeal, and the hospital's failure to respond is often resolved quickly at this level.</p>
-          </li>
-          <li>
-            <h4>File a complaint with your state health department</h4>
-            <p>Every state has a health department or hospital licensing authority that accepts patient complaints about hospital billing practices. For most states this is the Department of Health. Filing a formal complaint triggers an investigation — hospitals take state complaints very seriously because licensing is at stake. Find your state's complaint process on your state guide page.</p>
-          </li>
-          <li>
-            <h4>File a complaint with the IRS (for nonprofit hospitals)</h4>
-            <p>If the hospital is a 501(c)(3) nonprofit and you believe it is violating its 501(r) obligations — for example by refusing to accept applications, misrepresenting its income thresholds, or taking collection action while an application is pending — you can file a complaint with the IRS at <a href="https://www.irs.gov/compliance/criminal-investigation/how-do-you-report-suspected-tax-fraud-activity" target="_blank" rel="noopener">irs.gov</a>. This is a serious escalation, but it is an available tool. Hospitals that violate 501(r) risk losing their tax-exempt status — which is an existential threat they do not take lightly.</p>
-          </li>
-          <li>
-            <h4>Negotiate a payment plan as a fallback</h4>
-            <p>If all appeal avenues are exhausted and your income truly is above the threshold, negotiate a payment plan with the hospital billing department. Federal law requires nonprofit hospitals to offer FAP-eligible patients an extended payment plan before initiating collection action — but even patients above the eligibility threshold can usually negotiate a manageable monthly payment. A $50/month payment plan is far better than a collection account on your credit report.</p>
-          </li>
-        </ol>
-
-        <div id="hardship" class="section-head">
-          <span class="eyebrow">Medical hardship provision</span>
-          <h2>What to do when your income is above the threshold</h2>
-        </div>
-
-        <p>Here is something many people don't know: even if your income is genuinely above a hospital's standard charity care threshold, you may still qualify for financial assistance through a <strong>medical hardship</strong> or <strong>catastrophic care</strong> provision.</p>
-
-        <p>Medical hardship provisions are designed for situations where a patient's medical bills — while not qualifying them for standard charity care — represent a devastating percentage of their annual income. The logic is straightforward: a $40,000 hospital bill is catastrophic for a family earning $80,000 per year, even if that income is technically above a 300% FPL threshold.</p>
-
-        <p>Under the federal AGB rule, even patients above the standard charity care threshold cannot be charged more than what Medicare would pay for the same services — which is typically significantly lower than the chargemaster rate. Ask the hospital specifically: "Do you have a medical hardship policy or catastrophic care policy for patients above your standard income threshold?"</p>
-
-        <p>California's law explicitly prohibits hospitals from considering assets (only income counts). Some other states have similar rules. If you own a home or have savings but your income is low, ask specifically whether the hospital is counting assets — and whether your state's law allows that.</p>
-
-        <div id="legal-help" class="section-head">
-          <span class="eyebrow">Free legal help</span>
-          <h2>Where to get free help with a charity care dispute</h2>
-        </div>
-
-        <p>If your bill is large and the hospital is unresponsive, you don't have to fight alone. These organizations provide free help to low-income patients dealing with hospital billing disputes:</p>
-
-        <ul class="ledger-list">
-          <li>
-            <div>
-              <h4>Legal Aid Society (your state or city)</h4>
-              <p>Legal Aid organizations provide free legal services to low-income individuals. Many have staff attorneys who specialize specifically in medical debt and hospital billing disputes. Search "[your city] Legal Aid Society medical debt" to find your local chapter.</p>
-            </div>
-            <span class="tag">Free</span>
-          </li>
-          <li>
-            <div>
-              <h4>Dollar For (dollarfor.org)</h4>
-              <p>Dollar For is a nonprofit that helps patients apply for charity care at specific hospitals. They have a database of hospital financial assistance policies and provide hands-on assistance navigating the application process. Free service for qualifying patients.</p>
-            </div>
-            <span class="tag">Free</span>
-          </li>
-          <li>
-            <div>
-              <h4>Patient Advocate Foundation</h4>
-              <p>The Patient Advocate Foundation offers free case management services to help patients resolve insurance and billing disputes, including charity care denials. Visit patientadvocate.org to request a case manager.</p>
-            </div>
-            <span class="tag">Free</span>
-          </li>
-          <li>
-            <div>
-              <h4>Your state attorney general's consumer protection office</h4>
-              <p>If you believe a hospital is engaging in unfair or deceptive billing practices, your state attorney general's office accepts consumer complaints. This is a different escalation path from the health department and is particularly effective for egregious or repeated violations.</p>
-            </div>
-            <span class="tag">Free complaint filing</span>
-          </li>
-        </ul>
-
-        <div class="tag-row">
-          <a href="index.html#calculator">Check your eligibility →</a>
-          <a href="how-it-works.html">How charity care works →</a>
-          <a href="does-charity-care-cover-er-visits.html">ER visit coverage →</a>
-          <a href="illinois-hospital-financial-assistance.html">Illinois 400% FPL guide →</a>
-        </div>
-
       </div>
 
-      <aside class="ad-rail">
-        <div class="ad-slot ad-slot--sidebar" aria-label="Advertisement"></div>
-      </aside>
+      <div id="live-preview-box" class="live-preview hidden">
+        <div>
+          <div class="live-preview-label">Your estimated FPL</div>
+          <div class="live-savings" id="fpl-pct-large">–</div>
+          <div style="font-size:12px;color:#64748B;margin-top:4px;">% of Federal Poverty Level</div>
+        </div>
+        <div class="live-fpl-badge">
+          <div class="live-fpl-pct" id="live-status-text">–</div>
+          <div class="live-fpl-label" id="live-status-sub">Eligibility estimate</div>
+        </div>
+        <div>
+          <div class="live-preview-label">Potential savings</div>
+          <div class="live-savings" id="live-savings-num">$–</div>
+        </div>
+      </div>
+
+      <button class="btn-primary mt-16" onclick="goStep2()">Continue → Hospital Info</button>
     </div>
-  </section>
+  </div>
 
-  <section class="section section--alt">
-    <div class="container container--narrow">
-      <div class="section-head">
-        <span class="eyebrow">Sources</span>
-        <h2>Where this page's claims come from</h2>
+  <!-- ─── STEP 2: Hospital ─── -->
+  <div id="step2" class="hidden">
+    <div class="card">
+      <div class="card-title">About the hospital</div>
+      <p class="card-desc">Hospital type is the biggest factor — nonprofit hospitals have federal obligations that for-profit hospitals don't.</p>
+      <div class="field-group">
+        <div class="field" id="f-htype">
+          <label>Hospital Type <span class="req">*</span> <span class="hint">(check their website or call billing)</span></label>
+          <select id="hospital-type">
+            <option value="">Select…</option>
+            <option value="nonprofit">Nonprofit / 501(c)(3) — most community hospitals</option>
+            <option value="government">Government / Public — county or VA hospital</option>
+            <option value="forprofit">For-profit / Private</option>
+            <option value="unknown">Not sure</option>
+          </select>
+          <span class="error-msg">Please select hospital type</span>
+          <div class="info-box mt-8" id="htype-info" style="display:none"></div>
+        </div>
+        <div class="field" id="f-state-prog">
+          <label>Has the hospital mentioned a financial assistance program?</label>
+          <select id="has-program">
+            <option value="">Select…</option>
+            <option value="yes">Yes — they gave me paperwork</option>
+            <option value="mentioned">They mentioned it but didn't give details</option>
+            <option value="no">No / I haven't asked</option>
+            <option value="denied">They said I don't qualify</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Bill Status</label>
+          <select id="bill-status">
+            <option value="recent">Recent bill (within 6 months)</option>
+            <option value="collections">In collections / sent to debt collector</option>
+            <option value="paid">Already paid in full</option>
+            <option value="payment-plan">On a payment plan</option>
+            <option value="upcoming">Upcoming procedure (not yet billed)</option>
+          </select>
+        </div>
       </div>
-      <ol class="sources-list">
-        <li><span>1.</span><span>IRS Section 501(r) — Requirements for Tax-Exempt Hospitals — <a href="https://www.irs.gov/charities-non-profits/charitable-organizations/requirements-for-tax-exempt-hospitals-under-section-501r" target="_blank" rel="noopener">irs.gov</a></span></li>
-        <li><span>2.</span><span>Treasury Regulation §1.501(r)-6 — Billing and Collections — <a href="https://www.irs.gov/charities-non-profits/billing-and-collections" target="_blank" rel="noopener">irs.gov</a></span></li>
-        <li><span>3.</span><span>Patient Advocate Foundation — patientadvocate.org — <a href="https://www.patientadvocate.org/" target="_blank" rel="noopener">patientadvocate.org</a></span></li>
-        <li><span>4.</span><span>Dollar For, Hospital Charity Care Database — <a href="https://dollarfor.org" target="_blank" rel="noopener">dollarfor.org</a></span></li>
-        <li><span>5.</span><span>IRS, How to Report Suspected Tax Fraud — <a href="https://www.irs.gov/compliance/criminal-investigation/how-do-you-report-suspected-tax-fraud-activity" target="_blank" rel="noopener">irs.gov</a></span></li>
-      </ol>
-      <div class="callout callout--disclaimer" style="margin-top:1.6rem;">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M11 11h1v5h1"/></svg>
-        <div><h4>General information, not legal advice</h4><p>Hospital policies, state law, and federal regulations change over time. This page describes general principles that apply at most nonprofit hospitals. Individual hospital policies vary. If you are disputing a large medical bill, consider consulting a free legal aid organization in your state for advice specific to your situation.</p></div>
+      <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;">
+        <button class="btn-secondary" onclick="goStep1()">← Back</button>
+        <button class="btn-primary" style="flex:1;margin-top:0;" onclick="goStep3()">Continue → Your Situation</button>
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- ─── STEP 3: Situation ─── -->
+  <div id="step3" class="hidden">
+    <div class="card">
+      <div class="card-title">A few more details</div>
+      <p class="card-desc">These factors can significantly boost your eligibility or available discount.</p>
+      <div class="field-group">
+        <div class="field">
+          <label>Which apply to you? <span class="hint">(check all that apply)</span></label>
+          <div class="check-group">
+            <label class="check-item">
+              <input type="checkbox" id="ch-uninsured" value="uninsured">
+              <div>
+                <div class="check-text">I am currently uninsured</div>
+                <div class="check-sub">Many hospitals apply deeper discounts for uninsured patients automatically</div>
+              </div>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" id="ch-medicaid" value="medicaid">
+              <div>
+                <div class="check-text">I was denied Medicaid or don't qualify for Medicaid</div>
+                <div class="check-sub">This often fast-tracks hospital charity care applications</div>
+              </div>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" id="ch-emergency" value="emergency">
+              <div>
+                <div class="check-text">This was an emergency visit (ER/trauma)</div>
+                <div class="check-sub">Emergency care has extra protections in many states</div>
+              </div>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" id="ch-hardship" value="hardship">
+              <div>
+                <div class="check-text">I've had a recent financial hardship</div>
+                <div class="check-sub">Job loss, divorce, medical crisis, or other major income change in the past 12 months</div>
+              </div>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" id="ch-assets" value="assets">
+              <div>
+                <div class="check-text">I have significant medical debt (over $5,000 total)</div>
+                <div class="check-sub">Some hospitals have special programs for patients with high medical debt burdens</div>
+              </div>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" id="ch-repeated" value="repeated">
+              <div>
+                <div class="check-text">I've received care at this hospital before in the past year</div>
+                <div class="check-sub">Returning patients may qualify for retroactive application of charity care</div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;">
+        <button class="btn-secondary" onclick="goStep2()">← Back</button>
+        <button class="btn-primary" style="flex:1;margin-top:0;" onclick="calculateAndShow()">🔍 Check My Eligibility</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── RESULTS ─── -->
+  <div id="results">
+
+    <!-- AdSense Mid — high-intent placement, appears after results load -->
+    <div class="ad-slot">
+      <!-- REPLACE with live ad unit:
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-4073124583870713"
+           data-ad-slot="XXXXXXXXXX"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      -->
+      <span style="font-size:12px;color:var(--text-muted);">Advertisement</span>
+    </div>
+
+    <!-- Hero -->
+    <div class="result-hero" id="result-hero">
+      <div class="result-tier-badge" id="result-badge"></div>
+      <div class="result-headline" id="result-headline"></div>
+      <div class="result-summary" id="result-summary"></div>
+      <div class="result-metrics" id="result-metrics"></div>
+    </div>
+
+    <!-- Share -->
+    <div class="share-row">
+      <span class="share-label">💡 Know someone with a medical bill?</span>
+      <button class="share-btn share-reddit" onclick="shareReddit()">Share on Reddit</button>
+      <button class="share-btn share-copy" onclick="copyLink()">📋 Copy Link</button>
+    </div>
+
+    <!-- Two-column grid -->
+    <div class="result-grid">
+      <!-- Documents Checklist -->
+      <div class="panel">
+        <div class="panel-title">
+          <div class="panel-icon icon-teal">📋</div>
+          Documents to Gather
+        </div>
+        <div class="checklist" id="doc-checklist"></div>
+      </div>
+      <!-- Hospital Type Explainer -->
+      <div class="panel">
+        <div class="panel-title">
+          <div class="panel-icon icon-amber">🏥</div>
+          Hospital Type &amp; Your Rights
+        </div>
+        <div class="hospital-compare" id="hospital-rights"></div>
+      </div>
+    </div>
+
+    <!-- Next Steps -->
+    <div class="card">
+      <div class="card-title">Your Action Plan</div>
+      <p class="card-desc" style="margin-bottom:0">Exactly what to do, in order.</p>
+      <div class="steps-list" id="next-steps"></div>
+    </div>
+
+    <!-- Dispute Letter -->
+    <div class="letter-wrap">
+      <div class="letter-header">
+        <span class="letter-title">📄 Pre-Filled Charity Care Request Letter</span>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button class="btn-copy" onclick="copyLetter()">📋 Copy</button>
+          <button class="btn-pdf" onclick="downloadLetterPDF()">⬇ Download PDF</button>
+        </div>
+      </div>
+      <pre class="letter-body" id="dispute-letter"></pre>
+      <div class="letter-footer">
+        ℹ️ Customize the [bracketed] fields before sending. Send via certified mail and keep a copy.
+      </div>
+    </div>
+
+    <!-- AdSense Bottom — below letter, before state notes -->
+    <div class="ad-slot">
+      <!-- REPLACE with live ad unit:
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-4073124583870713"
+           data-ad-slot="XXXXXXXXXX"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      -->
+      <span style="font-size:12px;color:var(--text-muted);">Advertisement</span>
+    </div>
+
+    <!-- State-specific note -->
+    <div class="card" id="state-note-card">
+      <div class="card-title">📍 State-Specific Notes: <span id="state-note-name"></span></div>
+      <div id="state-note-content" style="font-size:14px;color:var(--text);line-height:1.7;"></div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+      <p><strong>Disclaimer:</strong> This tool provides educational estimates only and is not legal or financial advice. Actual eligibility is determined by individual hospitals under their own financial assistance policies, as required by IRS 501(r) regulations. Results may vary. Always apply directly with your hospital's billing department. If denied, you have the right to appeal. Consider consulting a hospital patient advocate or nonprofit credit counselor for complex situations.</p>
+    </div>
+
+    <!-- Sources & Citations (E-E-A-T) -->
+    <div class="sources-section" id="sources-section">
+      <div class="sources-title">📚 Sources &amp; Legal References</div>
+      <p class="sources-subtitle">This tool is built on official government regulations and peer-reviewed health policy research. All eligibility thresholds are derived from the sources below.</p>
+      <div class="sources-grid" id="sources-grid">
+        <!-- Populated by renderSources() in config.js data -->
+      </div>
+    </div>
+
+    <div style="margin-top:24px;text-align:center;">
+      <button class="btn-secondary" onclick="startOver()" style="color:var(--navy);font-weight:700;">← Start Over / Check Another Bill</button>
+    </div>
+  </div>
+
 </main>
 
-<footer class="site-footer">
-  <div class="container site-footer__grid">
-    <div>
-      <div class="site-footer__brand">CharityCareCheck</div>
-      <p style="max-width:32ch; font-size:.9rem;">A free, independent guide to hospital financial assistance and charity care rules in the United States.</p>
-    </div>
-    <div>
-      <h5>Explore</h5>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </div>
-    <div>
-      <h5>Related guides</h5>
-      <ul>
-        <li><a href="does-charity-care-cover-er-visits.html">ER visit coverage</a></li>
-        <li><a href="new-york-charity-care-eligibility-2026.html">New York eligibility</a></li>
-        <li><a href="illinois-hospital-financial-assistance.html">Illinois guide</a></li>
-        <li><a href="how-it-works.html">How charity care works</a></li>
-      </ul>
-    </div>
-    <div>
-      <h5>Legal</h5>
-      <ul>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="about.html">Editorial Process</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="container site-footer__legal">
-    <p>CharityCareCheck is not a hospital, insurer, law firm, or government agency. Content is for general educational purposes only and is not legal, medical, or financial advice.</p>
-    <p>© <span id="ccc-year">2026</span> CharityCareCheck.com · Published July 2026</p>
-  </div>
+<footer>
+  <p>Hospital Charity Care Eligibility Calculator</p>
+  <p style="margin-top:8px;"><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="mailto:contact@charitycarecheck.com">Contact</a></p>
+  <p style="margin-top:8px;">This tool is for educational purposes only. Not legal or financial advice.</p>
+  <p style="margin-top:8px;">© 2026 CharityCareCheck.com · Helping patients access care they've already paid for.</p>
 </footer>
 
-<script>document.getElementById('ccc-year').textContent = new Date().getFullYear();</script>
-<script src="js/main.js" defer></script>
+<script>
+// ─── DATA ───────────────────────────────────────────────────────────────────
+// FPL_2026, STATE_NOTES, HOSPITAL_TYPE_MESSAGES, HOSPITAL_RIGHTS, SOURCES
+// are all loaded from config.js (external file for easy annual updates).
+
+// ─── FPL HELPERS ─────────────────────────────────────────────────────────────
+
+function getFPL(size, state) {
+  const i = Math.min(size, 8) - 1;
+  if (state === 'Alaska') return FPL_2026.alaska[i];
+  if (state === 'Hawaii') return FPL_2026.hawaii[i];
+  return FPL_2026.base[i];
+}
+
+function calcFPLPct(income, size, state) {
+  const fpl = getFPL(size, state);
+  return Math.round((income / fpl) * 100);
+}
+
+// ─── STEP NAVIGATION ───
+let step = 1;
+
+function setStep(n) {
+  step = n;
+  [1,2,3].forEach(i => {
+    document.getElementById('step' + i).classList.toggle('hidden', i !== n);
+    document.getElementById('results').style.display = n === 4 ? 'block' : 'none';
+  });
+  // Progress
+  for (let i = 1; i <= 4; i++) {
+    const sc = document.getElementById('sc' + i);
+    const sl = document.getElementById('sl' + i);
+    if (!sc) continue;
+    sc.className = 'step-circle ' + (i < n ? 'done' : i === n ? 'active' : '');
+    if (sl) sl.className = 'step-label ' + (i < n ? 'done' : i === n ? 'active' : '');
+    if (i < n) sc.textContent = '✓'; else sc.textContent = i;
+    if (i <= 3) {
+      const line = document.getElementById('line' + i);
+      if (line) line.className = 'step-line ' + (i < n ? 'done' : '');
+    }
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goStep1() { setStep(1); }
+function goStep2() {
+  const errs = validate(['state','household-size','annual-income'], ['f-state','f-size','f-income']);
+  if (errs) return;
+  setStep(2);
+}
+function goStep3() {
+  const errs = validate(['hospital-type'], ['f-htype']);
+  if (errs) return;
+  setStep(3);
+}
+
+function validate(ids, wrapIds) {
+  let hasError = false;
+  ids.forEach((id, i) => {
+    const el = document.getElementById(id);
+    const wrap = document.getElementById(wrapIds[i]);
+    const val = el.value.trim();
+    if (!val) {
+      wrap.classList.add('has-error');
+      hasError = true;
+    } else {
+      wrap.classList.remove('has-error');
+    }
+  });
+  return hasError;
+}
+
+// ─── LIVE PREVIEW ───
+function updateLivePreview() {
+  const income = parseFloat(document.getElementById('annual-income').value);
+  const size = parseInt(document.getElementById('household-size').value);
+  const state = document.getElementById('state').value;
+  const bill = parseFloat(document.getElementById('hospital-bill').value) || 0;
+
+  const box = document.getElementById('live-preview-box');
+  if (!income || !size || !state) { box.classList.add('hidden'); return; }
+  box.classList.remove('hidden');
+
+  const pct = calcFPLPct(income, size, state);
+  document.getElementById('fpl-pct-large').textContent = pct + '%';
+
+  let statusText, statusSub, savings;
+  if (pct <= 100) {
+    statusText = '100% FREE'; statusSub = 'Very likely eligible';
+    savings = bill || income * 0.3;
+  } else if (pct <= 200) {
+    statusText = 'LIKELY FREE'; statusSub = 'Strong eligibility';
+    savings = bill ? bill * 0.9 : income * 0.2;
+  } else if (pct <= 300) {
+    statusText = '~50% OFF'; statusSub = 'Partial discount likely';
+    savings = bill ? bill * 0.5 : income * 0.1;
+  } else if (pct <= 400) {
+    statusText = '~25% OFF'; statusSub = 'Some discount possible';
+    savings = bill ? bill * 0.25 : income * 0.05;
+  } else {
+    statusText = 'NEGOTIATE'; statusSub = 'Limited but possible';
+    savings = bill ? bill * 0.1 : 500;
+  }
+
+  document.getElementById('live-status-text').textContent = statusText;
+  document.getElementById('live-status-sub').textContent = statusSub;
+  const savEl = document.getElementById('live-savings-num');
+  savEl.textContent = '$' + Math.round(savings).toLocaleString();
+  savEl.classList.remove('pulse');
+  void savEl.offsetWidth;
+  savEl.classList.add('pulse');
+}
+
+document.getElementById('annual-income').addEventListener('input', updateLivePreview);
+document.getElementById('household-size').addEventListener('change', updateLivePreview);
+document.getElementById('state').addEventListener('change', updateLivePreview);
+document.getElementById('hospital-bill').addEventListener('input', updateLivePreview);
+
+// Hospital type info — messages defined in config.js (HOSPITAL_TYPE_MESSAGES)
+document.getElementById('hospital-type').addEventListener('change', function() {
+  const box = document.getElementById('htype-info');
+  const msg = HOSPITAL_TYPE_MESSAGES[this.value];
+  if (msg) { box.innerHTML = msg; box.style.display = 'block'; }
+  else { box.style.display = 'none'; }
+});
+
+// ─── CALCULATE ───
+function calculateAndShow() {
+  const income = parseFloat(document.getElementById('annual-income').value) || 0;
+  const size = parseInt(document.getElementById('household-size').value) || 1;
+  const state = document.getElementById('state').value || 'Texas';
+  const bill = parseFloat(document.getElementById('hospital-bill').value) || 0;
+  const htype = document.getElementById('hospital-type').value;
+  const hasProgram = document.getElementById('has-program').value;
+  const billStatus = document.getElementById('bill-status').value;
+  const uninsured = document.getElementById('ch-uninsured').checked;
+  const medicaid = document.getElementById('ch-medicaid').checked;
+  const emergency = document.getElementById('ch-emergency').checked;
+  const hardship = document.getElementById('ch-hardship').checked;
+
+  const fplPct = calcFPLPct(income, size, state);
+  const fplBase = getFPL(size, state);
+
+  // ─── Determine tier ───
+  let tier, discountPct, tierLabel, tierClass, headline, summary;
+  let boostReason = '';
+
+  let effectivePct = fplPct;
+  if (uninsured) effectivePct = Math.max(effectivePct - 30, 50);
+  if (hardship) effectivePct = Math.max(effectivePct - 20, 50);
+  if (medicaid) effectivePct = Math.max(effectivePct - 15, 50);
+
+  if (htype === 'forprofit' && !['California','New York','Illinois','Massachusetts','Colorado','Washington','Oregon','Minnesota'].includes(state)) {
+    tier = 'negotiate';
+    discountPct = uninsured ? 30 : 15;
+    tierLabel = '⚖️ Negotiate Required';
+    tierClass = 'tier-negotiate';
+    headline = `You\'ll Need to Negotiate Directly — But Don\'t Pay Without Asking`;
+    summary = `For-profit hospitals have no federal obligation to offer charity care. However, you can and should ask about financial assistance programs. Hospital billing departments have significant discretion to reduce balances — especially for uninsured patients.`;
+  } else if (effectivePct <= 100) {
+    tier = 'free';
+    discountPct = 100;
+    tierLabel = '🏆 Likely Eligible for 100% Free Care';
+    tierClass = 'tier-free';
+    headline = `Your Bill Could Be <span class="savings-highlight">Completely Eliminated</span>`;
+    summary = `At ${fplPct}% of the Federal Poverty Level, you are below the standard threshold for full charity care at most nonprofit hospitals. ${uninsured ? 'Being uninsured strengthens your case significantly.' : ''} Apply immediately — hospitals are required to have a process.`;
+  } else if (effectivePct <= 200) {
+    tier = 'free';
+    discountPct = effectivePct <= 150 ? 100 : 85;
+    tierLabel = discountPct === 100 ? '✅ Strong Eligibility for Free Care' : '✅ Likely 85–100% Discount';
+    tierClass = 'tier-free';
+    headline = `You\'re a Strong Candidate for <span class="savings-highlight">${discountPct === 100 ? 'Free Care' : 'Up to 100% Off'}</span>`;
+    summary = `At ${fplPct}% FPL, you fall within or near the free care threshold at most nonprofit hospitals. Many hospitals set their 100% free care cutoff at 200% FPL — you're in that window. ${hardship ? 'A recent financial hardship strengthens your case further.' : ''}`;
+  } else if (effectivePct <= 300) {
+    tier = 'partial';
+    discountPct = effectivePct <= 250 ? 65 : 45;
+    tierLabel = '📉 Partial Discount Very Likely';
+    tierClass = 'tier-partial';
+    headline = `You May Qualify for a <span class="savings-highlight">${discountPct}%+ Discount</span>`;
+    summary = `At ${fplPct}% FPL, you're above free care thresholds but well within the sliding scale discount range (typically 200–400% FPL). Most nonprofit hospitals offer meaningful discounts here. Your bill of ${bill ? '$' + bill.toLocaleString() : 'your bill amount'} should be reduceable substantially.`;
+  } else if (effectivePct <= 400) {
+    tier = 'partial';
+    discountPct = 25;
+    tierLabel = '📋 Some Discount Possible';
+    tierClass = 'tier-partial';
+    headline = `Apply Anyway — You May Get <span class="savings-highlight">25%+ Off</span>`;
+    summary = `At ${fplPct}% FPL, you're at the edge of standard charity care thresholds, but many hospitals extend discounts up to 400% FPL. Hardship factors and being uninsured can shift your effective eligibility significantly.`;
+  } else {
+    tier = 'negotiate';
+    discountPct = 15;
+    tierLabel = '💬 Hardship Negotiation Strategy';
+    tierClass = 'tier-negotiate';
+    headline = `Above Standard Thresholds — But <span class="savings-highlight">Negotiation Works</span>`;
+    summary = `At ${fplPct}% FPL, you're above most charity care cutoffs — but hospitals still negotiate. Uninsured discounts, prompt-pay discounts, and payment plan negotiations can reduce your bill 15–40% even without formal charity care approval.`;
+  }
+
+  // ─── Estimated Savings ───
+  const estimatedSavings = bill ? Math.round(bill * discountPct / 100) : null;
+
+  // ─── Build Result Hero ───
+  document.getElementById('result-badge').className = 'result-tier-badge ' + tierClass;
+  document.getElementById('result-badge').textContent = tierLabel;
+  document.getElementById('result-headline').innerHTML = headline;
+  document.getElementById('result-summary').textContent = summary;
+
+  let metricsHTML = `
+    <div class="metric-box">
+      <div class="metric-value">${fplPct}%</div>
+      <div class="metric-label">Your FPL percentage</div>
+    </div>
+    <div class="metric-box">
+      <div class="metric-value">${discountPct}%</div>
+      <div class="metric-label">Estimated discount</div>
+    </div>`;
+  if (estimatedSavings) {
+    metricsHTML += `<div class="metric-box">
+      <div class="metric-value">$${estimatedSavings.toLocaleString()}</div>
+      <div class="metric-label">Potential savings</div>
+    </div>`;
+  } else {
+    metricsHTML += `<div class="metric-box">
+      <div class="metric-value">$${fplBase.toLocaleString()}</div>
+      <div class="metric-label">100% FPL for your family size</div>
+    </div>`;
+  }
+  document.getElementById('result-metrics').innerHTML = metricsHTML;
+
+  // ─── Documents Checklist ───
+  const docItems = [
+    { text: 'Recent pay stubs (last 2–3 months)', always: true },
+    { text: 'Federal tax return (most recent year)', always: true },
+    { text: 'Bank statements (last 2–3 months)', always: true },
+    { text: 'Government benefit award letters (if applicable)', cond: true },
+    { text: 'Proof of job loss or income change', cond: hardship },
+    { text: 'Medicaid denial letter', cond: medicaid },
+    { text: 'Hospital bill or account number', always: true },
+    { text: 'Photo ID', always: true },
+    { text: 'Proof of address (utility bill, lease)', always: true },
+    { text: 'Self-employment income records (if applicable)', cond: true },
+  ];
+  document.getElementById('doc-checklist').innerHTML = docItems
+    .filter(d => d.always || d.cond)
+    .map(d => `<div class="checklist-item">
+      <div class="checklist-dot dot-teal">✓</div>
+      <span>${d.text}</span>
+    </div>`).join('');
+
+  // ─── Hospital Rights — from config.js HOSPITAL_RIGHTS ───
+  const rightsData = (HOSPITAL_RIGHTS[htype] || HOSPITAL_RIGHTS['unknown']);
+  document.getElementById('hospital-rights').innerHTML = rightsData.map(r =>
+    `<div class="hospital-row ${r.hi ? 'highlight' : ''}">
+      <span class="hospital-row-label">${r.label}</span>
+      <span class="hospital-row-val">${r.val}</span>
+    </div>`
+  ).join('');
+
+  // ─── Next Steps ───
+  const steps = [];
+  if (htype === 'forprofit') {
+    steps.push({ n:1, title: 'Call billing and ask for an "uninsured discount"', desc: 'Say: "I\'m uninsured and cannot pay this bill in full. What financial assistance programs do you offer?" Many will apply 30–50% off without formal charity care.', time: 'Do this today' });
+    steps.push({ n:2, title: 'Ask for the charity care or financial assistance application', desc: 'Even for-profit hospitals often have programs — they\'re just not required to. Be persistent. Ask to speak with the financial assistance coordinator specifically.', time: 'Same call' });
+  } else {
+    steps.push({ n:1, title: 'Call the hospital billing department NOW', desc: 'Say: "I\'d like to apply for financial assistance under your charity care policy." They are required to give you an application. Do not pay anything until you apply.', time: 'Do this today' });
+    steps.push({ n:2, title: 'Request a copy of their Financial Assistance Policy (FAP)', desc: 'Nonprofit hospitals must provide this in writing. It outlines income thresholds, discount tiers, and the application deadline (usually 240 days from discharge).', time: 'Same call' });
+  }
+  steps.push({ n: steps.length+1, title: 'Gather your documents', desc: 'Collect income proof, tax returns, and bank statements. The document checklist on this page covers everything most hospitals need.', time: '1–2 days' });
+  steps.push({ n: steps.length+1, title: 'Submit your application with the dispute letter', desc: 'Use the pre-filled letter below as your cover page. Send via certified mail and keep copies of everything.', time: '1 week' });
+  if (billStatus === 'collections') {
+    steps.push({ n: steps.length+1, title: '⚠️ Critical: Send a "debt validation letter" immediately', desc: 'Your bill is in collections. Under the FDCPA, you have 30 days to request debt validation. This pauses collection activity. Use a template from the CFPB consumer resources.', time: 'Urgent — within 30 days of first contact' });
+  }
+  steps.push({ n: steps.length+1, title: 'If denied, appeal with this letter', desc: 'Denials can and should be appealed. Reference their own Financial Assistance Policy, your FPL percentage, and any extenuating circumstances. Request a review in writing.', time: 'Within 30 days of denial' });
+  steps.push({ n: steps.length+1, title: 'Contact your state insurance commissioner if rights are violated', desc: 'If a nonprofit hospital refuses to provide FAP documentation or denies you without a clear reason, file a complaint. This creates regulatory pressure and often resolves issues quickly.', time: 'If needed' });
+
+  document.getElementById('next-steps').innerHTML = steps.map(s =>
+    `<div class="step-row">
+      <div class="step-num">${s.n}</div>
+      <div class="step-row-content">
+        <div class="step-row-title">${s.title}</div>
+        <div class="step-row-desc">${s.desc}</div>
+        <div class="step-row-time">⏱ ${s.time}</div>
+      </div>
+    </div>`
+  ).join('');
+
+  // ─── Dispute Letter ───
+  const today = new Date().toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+  const billAmt = bill ? '$' + bill.toLocaleString() : '[BILL AMOUNT]';
+  const letterText = `${today}
+
+[Your Full Name]
+[Your Address]
+[City, State, ZIP]
+[Your Phone Number]
+[Your Email Address]
+
+Financial Assistance Department
+[Hospital Name]
+[Hospital Address]
+[City, State, ZIP]
+
+RE: Formal Financial Assistance Application / Charity Care Request
+Patient Account Number: [ACCOUNT NUMBER]
+Date of Service: [DATE OF SERVICE]
+Billed Amount: ${billAmt}
+
+Dear Financial Assistance Coordinator,
+
+I am writing to formally apply for financial assistance / charity care for the above-referenced account. I respectfully request a full review of my eligibility under your hospital's Financial Assistance Policy (FAP).
+
+HOUSEHOLD INFORMATION:
+• Household Size: ${size} person(s)
+• Annual Household Income: $${income.toLocaleString()}
+• Federal Poverty Level (FPL): Approximately ${fplPct}% of FPL (2026 guidelines)
+• State of Residence: ${state}
+${uninsured ? '• Insurance Status: Currently uninsured\n' : ''}${hardship ? '• Recent Financial Hardship: Yes (details available upon request)\n' : ''}${medicaid ? '• Medicaid Status: Not eligible / recently denied\n' : ''}
+LEGAL BASIS FOR THIS REQUEST:
+As a nonprofit hospital with 501(c)(3) tax-exempt status, your institution is required under IRS Section 501(r)(4) to maintain a written Financial Assistance Policy and to provide financial assistance to patients who qualify. Under 501(r)(6), you are prohibited from engaging in extraordinary collection actions before making a reasonable effort to determine whether I qualify for assistance.
+
+WHAT I AM REQUESTING:
+1. Full waiver or maximum discount of my balance based on my income level
+2. A written explanation of your charity care income thresholds and discount tiers
+3. A hold on any collection activity while this application is under review
+4. Written confirmation of receipt of this application within 14 days
+
+I have enclosed the following supporting documents:
+☐ Most recent federal tax return
+☐ Pay stubs from the last 3 months
+☐ Bank statements from the last 3 months
+☐ Photo ID
+☐ Proof of current address
+${medicaid ? '☐ Medicaid denial letter\n' : ''}${hardship ? '☐ Documentation of financial hardship\n' : ''}
+I am committed to resolving this account but am unable to pay the billed amount given my current financial circumstances. I respectfully request a timely review of this application.
+
+Please send all correspondence to the address above, or contact me by phone at [YOUR PHONE]. If you require additional documentation, I will provide it promptly.
+
+Thank you for your time and consideration.
+
+Sincerely,
+
+____________________________
+[Your Full Name]
+[Date]
+
+Enclosures: As listed above`;
+
+  document.getElementById('dispute-letter').textContent = letterText;
+
+  // ─── State Note ───
+  const stateNote = STATE_NOTES[state] || STATE_NOTES['default'];
+  document.getElementById('state-note-name').textContent = state;
+  document.getElementById('state-note-content').textContent = stateNote;
+
+  // ─── Sources section ───
+  renderSources();
+
+  setStep(4);
+}
+
+function copyLetter() {
+  const text = document.getElementById('dispute-letter').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.btn-copy');
+    btn.textContent = '✅ Copied!';
+    setTimeout(() => { btn.textContent = '📋 Copy'; }, 2000);
+  });
+}
+
+function downloadLetterPDF() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ unit: 'pt', format: 'letter' });
+
+  const margin = 72; // 1-inch margins
+  const pageWidth = doc.internal.pageSize.getWidth();
+  const usableWidth = pageWidth - margin * 2;
+
+  // Header bar
+  doc.setFillColor(15, 31, 61); // --navy
+  doc.rect(0, 0, pageWidth, 44, 'F');
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(13);
+  doc.setTextColor(255, 255, 255);
+  doc.text('Charity Care Request Letter — CharityCareCheck.com', margin, 28);
+
+  // Body text
+  doc.setFont('times', 'normal');
+  doc.setFontSize(11);
+  doc.setTextColor(30, 41, 59); // --text
+
+  const letterText = document.getElementById('dispute-letter').textContent;
+  const lines = doc.splitTextToSize(letterText, usableWidth);
+
+  let y = 70;
+  const lineHeight = 15;
+  const pageHeight = doc.internal.pageSize.getHeight();
+
+  lines.forEach(line => {
+    if (y + lineHeight > pageHeight - margin) {
+      doc.addPage();
+      y = margin;
+    }
+    doc.text(line, margin, y);
+    y += lineHeight;
+  });
+
+  // Footer on each page
+  const totalPages = doc.internal.getNumberOfPages();
+  for (let p = 1; p <= totalPages; p++) {
+    doc.setPage(p);
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(8);
+    doc.setTextColor(100, 116, 139);
+    doc.text(
+      'Generated by CharityCareCheck.com · Educational purposes only · Not legal advice',
+      margin,
+      pageHeight - 28
+    );
+    doc.text(`Page ${p} of ${totalPages}`, pageWidth - margin, pageHeight - 28, { align: 'right' });
+  }
+
+  doc.save('charity-care-request-letter.pdf');
+}
+
+// ─── RENDER SOURCES ───
+function renderSources() {
+  const orgMap = {
+    'irs.gov': 'IRS.gov',
+    'aspe.hhs.gov': 'HHS.gov',
+    'consumerfinance.gov': 'CFPB',
+    'cms.gov': 'CMS.gov',
+    'healthlaw.org': 'NHeLP',
+    'kff.org': 'KFF'
+  };
+  const grid = document.getElementById('sources-grid');
+  if (!grid) return;
+  grid.innerHTML = SOURCES.map(s => {
+    const hostname = new URL(s.url).hostname.replace('www.', '');
+    const org = Object.entries(orgMap).find(([k]) => hostname.includes(k));
+    const orgLabel = org ? org[1] : hostname;
+    return `<a class="source-item" href="${s.url}" target="_blank" rel="noopener noreferrer">
+      <span class="source-item-label">${s.label}</span>
+      <span class="source-item-desc">${s.desc}</span>
+      <span class="source-item-org">↗ ${orgLabel}</span>
+    </a>`;
+  }).join('');
+}
+
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = event.target;
+    btn.textContent = '✅ Link Copied!';
+    setTimeout(() => { btn.textContent = '📋 Copy Link'; }, 2000);
+  });
+}
+
+function shareReddit() {
+  const url = encodeURIComponent(window.location.href);
+  const title = encodeURIComponent('Free tool: Check if you qualify for hospital charity care — most nonprofit hospitals will write off your bill if you earn under 200% FPL');
+  window.open(`https://reddit.com/submit?url=${url}&title=${title}`, '_blank');
+}
+
+function startOver() {
+  document.getElementById('annual-income').value = '';
+  document.getElementById('household-size').value = '';
+  document.getElementById('state').value = '';
+  document.getElementById('hospital-bill').value = '';
+  document.getElementById('hospital-type').value = '';
+  document.getElementById('has-program').value = '';
+  document.getElementById('bill-status').value = 'recent';
+  ['ch-uninsured','ch-medicaid','ch-emergency','ch-hardship','ch-assets','ch-repeated'].forEach(id => {
+    document.getElementById(id).checked = false;
+  });
+  document.getElementById('live-preview-box').classList.add('hidden');
+  document.getElementById('htype-info').style.display = 'none';
+  setStep(1);
+}
+</script>
 </body>
 </html>
