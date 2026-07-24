@@ -1,412 +1,263 @@
-/* =========================================================================
-   CharityCareCheck.com — Shared Stylesheet
-   A calm, ledger-inspired design system for a hospital financial-assistance
-   reference site. Built around a paper/forest/amber palette, a serif+sans+
-   mono type system, and hairline "statement line" dividers that echo the
-   subject matter (billing statements, eligibility thresholds).
-   ========================================================================= */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florida Hospital Charity Care Rules &amp; Patient Rights | CharityCareCheck</title>
+<meta name="description" content="How Florida charity care works: the Patient's Bill of Rights transparency requirements, how the state defines charity care for hospital funding, and the Health Care Responsibility Act.">
+<link rel="canonical" href="https://charitycarecheck.com/florida.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Florida Hospital Charity Care Rules | CharityCareCheck">
+<meta property="og:description" content="Florida relies on the federal floor plus patient transparency rights and state funding definitions, rather than one statewide income cutoff.">
+<meta property="og:url" content="https://charitycarecheck.com/florida.html">
+<meta name="theme-color" content="#1F3A35">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:image" content="https://charitycarecheck.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CharityCareCheck — Hospital Charity Care Eligibility Calculator">
+<meta name="twitter:description" content="Free 2-minute eligibility estimate for hospital financial assistance.">
+<meta name="twitter:image" content="https://charitycarecheck.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Hospital Charity Care in Florida",
+  "description": "How Florida's Patient's Bill of Rights, Medicaid Disproportionate Share/Low Income Pool definitions, and the Health Care Responsibility Act shape hospital charity care.",
+  "author": { "@type": "Organization", "name": "CharityCareCheck" },
+  "publisher": { "@type": "Organization", "name": "CharityCareCheck" },
+  "dateModified": "2026-06-01"
+}
+</script>
+</head>
+<body>
 
-/* ---------- Design tokens ---------- */
-:root{
-  /* Color: named, then mapped to roles */
-  --forest:        #1F3A35;  /* primary brand / deep teal-forest */
-  --forest-700:     #294B44;
-  --forest-100:     #E7EEEC;
-  --paper:          #F2F4EF;  /* page background, cool pale sage-paper (not cream) */
-  --paper-raised:   #FFFFFF;
-  --ink:            #15211D;  /* primary text */
-  --ink-soft:       #44544D;  /* secondary text */
-  --amber:          #C28A3E;  /* CTA / accent */
-  --amber-700:      #A8722E;
-  --amber-100:      #F6E9D3;
-  --sage:           #6F9081;  /* success / positive eligibility */
-  --rose:           #B0584C;  /* warning / negative, muted brick not alarm-red */
-  --line:           #D8E0D7;  /* hairline border, light mode */
-  --line-strong:    #B9C6BC;
-  --shadow:         0 1px 2px rgba(21,33,29,0.06), 0 8px 24px rgba(21,33,29,0.06);
+<header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-mark" aria-hidden="true">C</span>
+      CharityCareCheck
+    </a>
+    <ul class="nav__links" data-nav-links>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li class="nav__dropdown">
+        <a href="#" aria-haspopup="true">State Guides ▾</a>
+        <div class="nav__dropdown-panel">
+          <a href="california.html">California</a>
+          <a href="texas.html">Texas</a>
+          <a href="florida.html">Florida</a>
+          <a href="new-york.html">New York</a>
+          <a href="illinois.html">Illinois</a>
+          <a href="massachusetts.html">Massachusetts</a>
+          <a href="pennsylvania.html">Pennsylvania</a>
+          <a href="ohio.html">Ohio</a>
+          <a href="georgia.html">Georgia</a>
+          <a href="north-carolina.html">North Carolina</a>
+          <a href="virginia.html">Virginia</a>
+          <a href="washington.html">Washington</a>
+          <a href="oregon.html">Oregon</a>
+          <a href="colorado.html">Colorado</a>
+          <a href="arizona.html">Arizona</a>
+          <a href="minnesota.html">Minnesota</a>
+          <a href="maryland.html">Maryland</a>
+          <a href="connecticut.html">Connecticut</a>
+          <a href="new-jersey.html">New Jersey</a>
+        </div>
+      </li>
+      <li><a href="articles.html">Articles</a></li>
+      <li class="nav__dropdown">
+        <a href="hospitals.html" aria-haspopup="true">Hospital Lookup ▾</a>
+        <div class="nav__dropdown-panel">
+          <a href="charitycarecheck-hospital-pages/brigham-womens-financial-assistance.html">Brigham & Women's</a>
+          <a href="charitycarecheck-hospital-pages/cedars-sinai-financial-assistance.html">Cedars-Sinai</a>
+          <a href="charitycarecheck-hospital-pages/cleveland-clinic-financial-assistance.html">Cleveland Clinic</a>
+          <a href="charitycarecheck-hospital-pages/duke-health-financial-assistance.html">Duke Health</a>
+          <a href="charitycarecheck-hospital-pages/houston-methodist-financial-assistance.html">Houston Methodist</a>
+          <a href="charitycarecheck-hospital-pages/jackson-memorial-financial-assistance.html">Jackson Memorial</a>
+          <a href="charitycarecheck-hospital-pages/johns-hopkins-financial-assistance.html">Johns Hopkins</a>
+          <a href="charitycarecheck-hospital-pages/mass-general-financial-assistance.html">Mass General</a>
+          <a href="charitycarecheck-hospital-pages/mayo-clinic-financial-assistance.html">Mayo Clinic</a>
+          <a href="charitycarecheck-hospital-pages/montefiore-financial-assistance.html">Montefiore</a>
+          <a href="charitycarecheck-hospital-pages/new-york-presbyterian-financial-assistance.html">NewYork-Presbyterian</a>
+          <a href="charitycarecheck-hospital-pages/northwell-health-financial-assistance.html">Northwell Health</a>
+          <a href="charitycarecheck-hospital-pages/northwestern-memorial-financial-assistance.html">Northwestern Memorial</a>
+          <a href="charitycarecheck-hospital-pages/nyu-langone-financial-assistance.html">NYU Langone</a>
+          <a href="charitycarecheck-hospital-pages/stanford-health-care-financial-assistance.html">Stanford Health Care</a>
+          <a href="charitycarecheck-hospital-pages/ucla-health-financial-assistance.html">UCLA Health</a>
+          <a href="charitycarecheck-hospital-pages/ucsf-financial-assistance.html">UCSF Health</a>
+          <a href="charitycarecheck-hospital-pages/upmc-financial-assistance.html">UPMC</a>
+          <a href="charitycarecheck-hospital-pages/vanderbilt-financial-assistance.html">Vanderbilt</a>
+          <a href="charitycarecheck-hospital-pages/yale-new-haven-financial-assistance.html">Yale New Haven</a>
+        </div>
+      </li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
 
-  --font-display: 'Newsreader', 'Iowan Old Style', Georgia, serif;
-  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono:    'IBM Plex Mono', 'SF Mono', Menlo, monospace;
+<main>
+  <div class="container" style="padding-top:18px;">
+    <div class="ad-slot ad-slot--leaderboard" aria-label="Advertisement">Advertisement <span>970×90 · leaderboard</span></div>
+  </div>
 
-  --container: 1180px;
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+  <div class="page-header container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#calculator">State Guides</a> / Florida</div>
+    <span class="eyebrow">State guide</span>
+    <h1>Hospital charity care in Florida</h1>
+    <p>Florida doesn't set one statewide income cutoff for hospital charity care the way California does. Instead, state law guarantees specific transparency rights, defines "charity care" for how the state funds hospitals, and runs a separate mechanism for emergency care given to indigent non-residents.</p>
+    <div class="tag-row">
+      <a href="#rights">Patient transparency rights</a>
+      <a href="#funding-definition">How the state defines charity care</a>
+      <a href="#hcra">The Health Care Responsibility Act</a>
+    </div>
+  </div>
 
-  --nav-h: 68px;
+  <section class="section">
+    <div class="container has-rail">
+      <div class="prose">
 
-  color-scheme: light;
-}
+        <div class="card-grid">
+          <div class="card"><span class="mono-num">Law</span><h3>Patient's Bill of Rights</h3><p>Fla. Stat. §381.026 guarantees cost estimates and financial-counseling rights, especially for uninsured patients before scheduled care.</p></div>
+          <div class="card"><span class="mono-num">Funding rule</span><h3>200% / 400% FPL bands</h3><p>Fla. Stat. §409.911 defines "charity care" for Medicaid disproportionate-share funding purposes — not a direct patient eligibility mandate.</p></div>
+          <div class="card"><span class="mono-num">Regulator</span><h3>AHCA</h3><p>The Agency for Health Care Administration oversees hospital licensure, Medicaid DSH/LIP funding, and the Health Care Responsibility Act.</p></div>
+          <div class="card"><span class="mono-num">2021–22 total</span><h3>$1.8 billion</h3><p>In charity care reported by Florida hospitals, per the Florida Hospital Association's 2023 issue brief.</p></div>
+        </div>
 
-[data-theme="dark"]{
-  --forest:        #6FB6A2;
-  --forest-700:     #8FCBB9;
-  --forest-100:     #16241F;
-  --paper:          #0F1614;
-  --paper-raised:   #16201D;
-  --ink:            #E9EEEA;
-  --ink-soft:       #AEBBB3;
-  --amber:          #E0A858;
-  --amber-700:      #EFC183;
-  --amber-100:      #2A2418;
-  --sage:           #8FB7A6;
-  --rose:           #CB8579;
-  --line:           #263430;
-  --line-strong:    #34453F;
-  --shadow:         0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.35);
-  color-scheme: dark;
-}
+        <div id="rights" class="section-head">
+          <span class="eyebrow">Patient transparency rights</span>
+          <h2>What Florida law actually guarantees you</h2>
+        </div>
+        <p>Rather than mandating a specific charity-care income threshold, Florida's <a href="https://www.flsenate.gov/Laws/Statutes/2018/0381.026" target="_blank" rel="noopener">Patient's Bill of Rights and Responsibilities</a> (Fla. Stat. §381.026) focuses on making sure you know your options before and during care. Hospitals and providers must:</p>
+        <ul>
+          <li>Give you, on request, full information and counseling on financial resources available for your care</li>
+          <li>Provide an uninsured patient a reasonable estimate of charges before planned, non-emergency services — along with information about the provider's or hospital's discount or charity policies you may be eligible for</li>
+          <li>Disclose whether a provider accepts Medicare assignment as full payment, if you're Medicare-eligible</li>
+          <li>Make these estimates and disclosures understandable to an ordinary layperson, not just in technical billing language</li>
+        </ul>
+        <p>These are real, enforceable rights — but they're about transparency and access to information, not a guarantee of a specific discount amount. The hospital's own Financial Assistance Policy (required everywhere under federal 501(r) for nonprofit hospitals) is what actually sets your eligibility tiers.</p>
 
-/* ---------- Reset ---------- */
-*,*::before,*::after{ box-sizing: border-box; }
-html{ -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-body{
-  margin:0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  transition: background-color .2s ease, color .2s ease;
-}
-img{ max-width:100%; display:block; }
-a{ color: var(--forest); text-decoration: none; }
-a:hover{ text-decoration: underline; }
-ul,ol{ padding-left: 1.25em; }
-h1,h2,h3,h4{
-  font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.18;
-  color: var(--ink);
-  margin: 0 0 .5em;
-  letter-spacing: -0.01em;
-}
-h1{ font-size: clamp(2.1rem, 4.2vw, 3.2rem); }
-h2{ font-size: clamp(1.5rem, 2.6vw, 2.1rem); }
-h3{ font-size: 1.25rem; }
-p{ margin: 0 0 1em; color: var(--ink); }
-strong{ color: var(--ink); }
-:focus-visible{ outline: 2px solid var(--amber); outline-offset: 2px; border-radius: 4px; }
-@media (prefers-reduced-motion: reduce){
-  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
-}
+        <div class="ad-slot ad-slot--incontent" aria-label="Advertisement">Advertisement <span>responsive · in-content</span></div>
 
-.container{ max-width: var(--container); margin: 0 auto; padding: 0 24px; }
-.container--narrow{ max-width: 760px; }
-main{ display:block; }
+        <div id="funding-definition" class="section-head">
+          <span class="eyebrow">How the state defines charity care</span>
+          <h2>The 200% / 400% FPL bands used for hospital funding</h2>
+        </div>
+        <p>Florida's Medicaid disproportionate-share and Low Income Pool program (Fla. Stat. §409.911) defines "charity care" for the purpose of calculating state hospital funding: care for a patient whose family income is at or below <strong>200% of the federal poverty level</strong> counts as charity care, as does care for higher-income patients whose hospital charges exceed <strong>25% of their annual family income</strong> — though in no case do charges count toward charity care funding above <strong>400% of FPL for a family of four</strong>.</p>
+        <p>It's important to be clear about what this is: a definition used to calculate state reimbursement to hospitals, not a personal entitlement you can point to when applying. That said, many Florida hospitals' own FAPs are modeled around similar income bands. As one real, published example — not a statewide rule — Tampa General Hospital's policy offers full charity write-offs from 0–300% of FPL, a "catastrophic" charity provision when non-elective charges exceed 25% of annual household income, a Medicare/Medicaid-equivalent rate for income between 300–400% of FPL, and a managed-care-equivalent rate above 400%. Always check the specific hospital's own posted policy rather than assuming this applies everywhere.</p>
 
-/* ---------- Utility ---------- */
-.eyebrow{
-  font-family: var(--font-mono);
-  font-size: .72rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--amber-700);
-  display:flex;
-  align-items:center;
-  gap:.5em;
-  margin-bottom: .6em;
-}
-.eyebrow::before{ content:""; width:14px; height:1px; background: var(--amber-700); display:inline-block; }
-.text-soft{ color: var(--ink-soft); }
-.mono{ font-family: var(--font-mono); }
-.sr-only{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
-.section{ padding: 64px 0; }
-.section--tight{ padding: 40px 0; }
-.section--alt{ background: var(--forest-100); }
-.divider{ border:0; border-top: 1px solid var(--line); margin: 0; }
-.stack-sm > * + *{ margin-top: .5em; }
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Concept</th><th>What it controls</th></tr></thead>
+            <tbody>
+              <tr><td>Federal 501(r) FAP</td><td>Your actual eligibility tiers and AGB pricing ceiling — applies to every nonprofit hospital nationwide, including in Florida.</td></tr>
+              <tr><td>Fla. Stat. §381.026</td><td>Your right to estimates, counseling, and disclosure about discount/charity options before non-emergency care.</td></tr>
+              <tr><td>Fla. Stat. §409.911</td><td>How the state counts "charity care" when calculating Medicaid DSH/Low Income Pool payments to hospitals.</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-/* ---------- Buttons ---------- */
-.btn{
-  display:inline-flex; align-items:center; justify-content:center; gap:.5em;
-  font-family: var(--font-body); font-weight: 600; font-size: .95rem;
-  padding: .8em 1.4em; border-radius: var(--radius-sm);
-  border: 1px solid transparent; cursor:pointer;
-  transition: transform .12s ease, background-color .15s ease, border-color .15s ease, color .15s ease;
-  white-space: nowrap;
-}
-.btn:hover{ text-decoration:none; transform: translateY(-1px); }
-.btn:active{ transform: translateY(0); }
-.btn-primary{ background: var(--amber); color: #1A1308; border-color: var(--amber); }
-.btn-primary:hover{ background: var(--amber-700); }
-.btn-secondary{ background: transparent; color: var(--forest); border-color: var(--forest); }
-.btn-secondary:hover{ background: var(--forest-100); }
-[data-theme="dark"] .btn-secondary{ color: var(--paper-raised); border-color: var(--line-strong); }
-.btn-block{ width:100%; }
-.btn-sm{ padding:.55em 1em; font-size:.85rem; }
+        <div id="hcra" class="section-head">
+          <span class="eyebrow">Behind the scenes</span>
+          <h2>The Health Care Responsibility Act (HCRA)</h2>
+        </div>
+        <p>Florida also runs the <a href="https://ahca.myflorida.com/MCHQ/Central_Services/Financial_Ana_Unit/HCRA/hcrahb.shtml" target="_blank" rel="noopener">Health Care Responsibility Act</a>, administered by AHCA. In simplified terms, it lets a hospital seek reimbursement from a patient's county of residence for certain emergency care given to an indigent, uninsured non-resident. This operates between the hospital and the county — it isn't something you apply for directly — but it can occasionally affect whether a bill gets resolved without further collection action against you. It's worth mentioning to hospital billing staff if you were treated away from your home county and believe you may qualify, but it should never replace applying directly to the hospital's own FAP.</p>
 
-/* ---------- Navigation ---------- */
-.site-header{
-  position: sticky; top:0; z-index: 100;
-  background: var(--paper); border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(6px);
-}
-.site-header.is-scrolled{ box-shadow: var(--shadow); }
-.nav{
-  height: var(--nav-h);
-  display:flex; align-items:center; justify-content:space-between; gap: 1rem;
-}
-.nav__logo{
-  display:flex; align-items:center; gap:.5em;
-  font-family: var(--font-display); font-weight:700; font-size:1.18rem; color: var(--ink);
-}
-.nav__logo:hover{ text-decoration:none; }
-.nav__logo-mark{
-  width:30px; height:30px; border-radius: 7px; flex:none;
-  background: var(--forest); color: var(--paper-raised);
-  display:flex; align-items:center; justify-content:center;
-  font-family: var(--font-mono); font-size: .85rem; font-weight:700;
-}
-.nav__links{ display:flex; align-items:center; gap: 1.6rem; list-style:none; margin:0; padding:0; }
-.nav__links a{
-  color: var(--ink-soft); font-weight:600; font-size:.93rem;
-  padding: .4em .1em; border-bottom: 2px solid transparent;
-}
-.nav__links a:hover{ color: var(--ink); text-decoration:none; }
-.nav__links a.is-active{ color: var(--forest); border-color: var(--amber); }
-[data-theme="dark"] .nav__links a.is-active{ color: var(--forest); }
-.nav__actions{ display:flex; align-items:center; gap:.75rem; }
-.nav__dropdown{ position:relative; }
-.nav__dropdown-panel{
-  position:absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%);
-  background: var(--paper-raised); border:1px solid var(--line); border-radius: var(--radius-md);
-  box-shadow: var(--shadow); padding: .5rem; min-width: 190px;
-  display:none; flex-direction:column;
-}
-.nav__dropdown:hover .nav__dropdown-panel,
-.nav__dropdown:focus-within .nav__dropdown-panel{ display:flex; }
-.nav__dropdown-panel a{
-  padding:.55em .75em; border-radius: var(--radius-sm); color: var(--ink); font-size:.9rem; font-weight:500; border-bottom:0;
-}
-.nav__dropdown-panel a:hover{ background: var(--forest-100); text-decoration:none; }
-.theme-toggle{
-  width:38px; height:38px; border-radius:50%; border:1px solid var(--line);
-  background: var(--paper-raised); color: var(--ink); cursor:pointer;
-  display:flex; align-items:center; justify-content:center; flex:none;
-}
-.theme-toggle svg{ width:17px; height:17px; }
-.menu-toggle{
-  display:none; flex:none; width:40px; height:40px; border-radius: var(--radius-sm);
-  border:1px solid var(--line); background: var(--paper-raised); cursor:pointer;
-  align-items:center; justify-content:center;
-}
-.menu-toggle svg{ width:20px; height:20px; }
+        <div class="callout">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
+          <div><h4>The federal floor still applies</h4><p>Because Florida doesn't add its own statewide income mandate, the federal 501(r) rules — the written FAP, the AGB pricing limit, presumptive eligibility, and the 240-day application window — are doing most of the work for nonprofit hospital patients in Florida. See our <a href="how-it-works.html">deep dive</a>.</p></div>
+        </div>
 
-@media (max-width: 880px){
-  .nav__links{
-    position:fixed; top: var(--nav-h); left:0; right:0; bottom:0;
-    background: var(--paper); flex-direction:column; align-items:stretch; gap:0;
-    padding: .5rem 24px 2rem; overflow-y:auto;
-    transform: translateY(-8px); opacity:0; visibility:hidden; pointer-events:none;
-    transition: opacity .18s ease, transform .18s ease;
-  }
-  .nav__links.is-open{ opacity:1; visibility:visible; pointer-events:auto; transform:none; }
-  .nav__links a{ padding: .9em 0; border-bottom:1px solid var(--line); width:100%; }
-  .nav__dropdown-panel{ position:static; transform:none; display:none; box-shadow:none; border:0; padding-left:.75rem; min-width:0; }
-  .nav__dropdown.is-open .nav__dropdown-panel{ display:flex; }
-  .menu-toggle{ display:flex; }
-}
+        <div class="tag-row">
+          <a href="index.html#calculator">Check your eligibility →</a>
+          <a href="how-it-works.html">Federal rules explained →</a>
+          <a href="california.html">California guide →</a>
+          <a href="texas.html">Texas guide →</a>
+        </div>
+      </div>
 
-/* ---------- Ad placeholders ---------- */
-/* Placeholder text hidden — real AdSense units will replace this content after approval */
-.ad-slot{
-  display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.3em;
-  background: transparent; border: none; border-radius: var(--radius-sm);
-  color: transparent; font-size:0;
-  margin: 0 auto;
-}
-.ad-slot span{ display:none; }
-.ad-slot--leaderboard{ width:100%; max-width:970px; min-height:90px; }
-.ad-slot--incontent{ width:100%; min-height:250px; margin: 2.5rem auto; max-width:728px; }
-.ad-slot--sidebar{ width:100%; min-height:600px; position: sticky; top: calc(var(--nav-h) + 24px); }
-.ad-rail{ display:none; }
-@media (min-width: 1240px){
-  .has-rail{ display:grid; grid-template-columns: 1fr 300px; gap: 48px; align-items:start; }
-  .ad-rail{ display:block; }
-}
+      <aside class="ad-rail">
+        <div class="ad-slot ad-slot--sidebar" aria-label="Advertisement">Advertisement <span>300×600 · sticky sidebar</span></div>
+      </aside>
+    </div>
+  </section>
 
-/* ---------- Hero ---------- */
-.hero{ padding: 56px 0 40px; }
-.hero__grid{ display:grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items:center; }
-.hero__kicker{
-  font-family: var(--font-mono); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase;
-  color: var(--forest); background: var(--forest-100); display:inline-flex; padding:.4em .8em;
-  border-radius: 999px; margin-bottom: 1em;
-}
-.hero h1{ margin-bottom:.55em; }
-.hero__lede{ font-size: 1.1rem; color: var(--ink-soft); max-width: 46ch; }
-.hero__actions{ display:flex; gap: .9rem; margin-top: 1.6rem; flex-wrap:wrap; }
-.hero__trust{ display:flex; gap: 1.6rem; margin-top: 2.2rem; flex-wrap:wrap; }
-.hero__trust div{ font-family: var(--font-mono); font-size:.78rem; color: var(--ink-soft); }
-.hero__trust strong{ display:block; font-family: var(--font-display); font-size:1.5rem; color: var(--ink); font-weight:600; }
-@media (max-width: 920px){ .hero__grid{ grid-template-columns:1fr; gap:32px; } }
+  <section class="section section--alt">
+    <div class="container container--narrow">
+      <div class="section-head">
+        <span class="eyebrow">Sources</span>
+        <h2>Where this page's claims come from</h2>
+      </div>
+      <ol class="sources-list">
+        <li><span>1.</span><span>Florida Statutes §381.026, Florida Patient's Bill of Rights and Responsibilities — <a href="https://www.flsenate.gov/Laws/Statutes/2018/0381.026" target="_blank" rel="noopener">flsenate.gov</a></span></li>
+        <li><span>2.</span><span>Florida Statutes §409.911, Disproportionate Share Program — <a href="https://ahca.myflorida.com/content/download/10868/file/409_911_update.pdf" target="_blank" rel="noopener">ahca.myflorida.com</a></span></li>
+        <li><span>3.</span><span>Florida Hospital Association, "Charity Care" issue brief, January 2023 — <a href="https://fha.org/common/Uploaded%20files/FHA/Health%20Care%20Issues/Updated%20Briefs%200525/Issue%20Brief%20on%20Charity%20Care.pdf" target="_blank" rel="noopener">fha.org</a></span></li>
+        <li><span>4.</span><span>Florida AHCA, Health Care Responsibility Act Handbook — <a href="https://ahca.myflorida.com/MCHQ/Central_Services/Financial_Ana_Unit/HCRA/hcrahb.shtml" target="_blank" rel="noopener">ahca.myflorida.com</a></span></li>
+        <li><span>5.</span><span>Tampa General Hospital, Financial Assistance Information (example hospital policy, not a state mandate) — <a href="https://www.tgh.org/patients-visitors/billing-insurance/financial-assistance-information" target="_blank" rel="noopener">tgh.org</a></span></li>
+      </ol>
+      <div class="callout callout--disclaimer" style="margin-top:1.6rem;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M11 11h1v5h1"/></svg>
+        <div><h4>General information, not legal advice</h4><p>The Tampa General example illustrates one hospital's published tiers — it is not a Florida-wide rule. Confirm current details with AHCA or the specific hospital's financial assistance office.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
 
-/* ---------- FPL Gauge (signature element) ---------- */
-.fpl-gauge{
-  background: var(--paper-raised); border:1px solid var(--line); border-radius: var(--radius-lg);
-  padding: 1.6rem; box-shadow: var(--shadow);
-}
-.fpl-gauge__head{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1.1rem; }
-.fpl-gauge__title{ font-family: var(--font-mono); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color: var(--ink-soft); }
-.fpl-gauge__updated{ font-family: var(--font-mono); font-size:.68rem; color: var(--ink-soft); }
-.fpl-gauge svg{ width:100%; height:auto; display:block; }
-.fpl-gauge__legend{ display:flex; flex-wrap:wrap; gap: .9rem 1.3rem; margin-top:1rem; }
-.fpl-gauge__legend li{ list-style:none; display:flex; align-items:center; gap:.5em; font-size:.78rem; color: var(--ink-soft); }
-.fpl-gauge__legend i{ width:10px; height:10px; border-radius:2px; display:inline-block; }
-.fpl-gauge__note{ font-size:.78rem; color: var(--ink-soft); margin-top: 1rem; padding-top:1rem; border-top:1px dashed var(--line); }
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <div class="site-footer__brand">CharityCareCheck</div>
+      <p style="max-width:32ch; font-size:.9rem;">A free, independent guide to hospital financial assistance and charity care rules in the United States.</p>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>State guides</h5>
+      <ul>
+        <li><a href="california.html">California</a></li>
+        <li><a href="texas.html">Texas</a></li>
+        <li><a href="florida.html">Florida</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="about.html">Editorial Process</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container site-footer__legal">
+    <p>CharityCareCheck is not a hospital, insurer, law firm, or government agency, and is not affiliated with any specific hospital system. Content is for general educational purposes only and is not legal, medical, or financial advice. Eligibility rules vary by hospital and change over time — always confirm details directly with the hospital's financial assistance office or AHCA.</p>
+    <p>© <span id="ccc-year">2026</span> CharityCareCheck.com · Page last reviewed June 2026</p>
+  </div>
+</footer>
 
-/* ---------- Trust strip ---------- */
-.trust-strip{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); background: var(--paper-raised); }
-.trust-strip__row{ display:flex; gap: 2.2rem; flex-wrap:wrap; padding: 1.4rem 0; }
-.trust-strip__item{ display:flex; gap:.7em; align-items:flex-start; flex:1 1 220px; }
-.trust-strip__item svg{ flex:none; width:20px; height:20px; color: var(--forest); margin-top:.15em; }
-.trust-strip__item h4{ font-family: var(--font-body); font-size:.92rem; margin:0 0 .15em; }
-.trust-strip__item p{ font-size:.83rem; color: var(--ink-soft); margin:0; }
-
-/* ---------- Cards / grids ---------- */
-.card-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-@media (max-width: 920px){ .card-grid{ grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 640px){ .card-grid{ grid-template-columns: 1fr; } }
-.card{
-  background: var(--paper-raised); border:1px solid var(--line); border-radius: var(--radius-md);
-  padding: 1.5rem; display:flex; flex-direction:column; gap:.6rem;
-}
-.card .mono-num{ font-family: var(--font-mono); color: var(--amber-700); font-size:.85rem; }
-.card h3{ margin:0; }
-.card p{ color: var(--ink-soft); margin:0; font-size:.92rem; }
-
-.ledger-list{ list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
-.ledger-list li{
-  display:grid; grid-template-columns: 1fr auto; gap: 1.5rem; padding: 1.1rem 0;
-  border-bottom: 1px solid var(--line);
-}
-.ledger-list h4{ font-family: var(--font-body); font-weight:700; font-size:1rem; margin:0 0 .25em; }
-.ledger-list p{ margin:0; color: var(--ink-soft); font-size:.92rem; }
-.ledger-list .tag{
-  font-family: var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.06em;
-  color: var(--forest); white-space:nowrap; align-self:start; padding-top:.2em;
-}
-
-.steps{ list-style:none; margin:0; padding:0; counter-reset: step; }
-.steps li{
-  display:grid;
-  grid-template-columns: 44px 1fr;
-  grid-template-rows: auto auto;
-  column-gap: 1rem;
-  row-gap: .25rem;
-  padding: 1.2rem 0;
-  border-bottom:1px solid var(--line);
-  align-items: start;
-}
-.steps li:first-child{ border-top:1px solid var(--line); }
-.steps li::before{
-  counter-increment: step; content: counter(step);
-  font-family: var(--font-mono); font-weight:700; font-size:.95rem;
-  width:44px; height:44px; border-radius:50%; background: var(--forest-100); color: var(--forest);
-  display:flex; align-items:center; justify-content:center;
-  grid-column: 1;
-  grid-row: 1 / 3;
-}
-.steps h4{ grid-column: 2; grid-row: 1; margin:0 0 .15em; }
-.steps p { grid-column: 2; grid-row: 2; margin:0; color: var(--ink-soft); font-size:.92rem; }
-
-/* ---------- Callouts ---------- */
-.callout{
-  border:1px solid var(--line); border-left: 4px solid var(--forest); background: var(--paper-raised);
-  border-radius: var(--radius-md); padding: 1.2rem 1.4rem; display:flex; gap: .9rem;
-}
-.callout svg{ flex:none; width:22px; height:22px; color: var(--forest); margin-top:.15em; }
-.callout h4{ margin:0 0 .3em; font-family: var(--font-body); font-size:1rem; }
-.callout p{ margin:0; font-size:.9rem; color: var(--ink-soft); }
-.callout--warning{ border-left-color: var(--rose); }
-.callout--warning svg{ color: var(--rose); }
-.callout--disclaimer{ border-left-color: var(--ink-soft); background: var(--forest-100); }
-.callout--disclaimer svg{ color: var(--ink-soft); }
-
-/* ---------- Calculator embed ---------- */
-.calc-embed{
-  background: var(--paper-raised); border:1px solid var(--line); border-radius: var(--radius-lg);
-  box-shadow: var(--shadow); overflow:hidden;
-}
-.calc-embed__head{ padding: 1.4rem 1.6rem; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; }
-.calc-embed__head h3{ margin:0; }
-.calc-embed__head p{ margin:.2em 0 0; font-size:.85rem; color: var(--ink-soft); }
-.calc-embed__frame-wrap{ position:relative; background: var(--forest-100); }
-.calc-embed iframe{ width:100%; min-height: 620px; border:0; display:block; background: var(--paper-raised); }
-.calc-embed__fallback{ padding: 3rem 1.6rem; text-align:center; color: var(--ink-soft); }
-.calc-embed__fallback strong{ display:block; color: var(--ink); margin-bottom:.4em; }
-.calc-embed__foot{ padding: 1rem 1.6rem; font-size:.78rem; color: var(--ink-soft); border-top:1px solid var(--line); }
-
-/* ---------- Sources / footer ---------- */
-.sources-list{ list-style:none; margin:0; padding:0; display:grid; gap:.75rem; }
-.sources-list li{ display:flex; gap:.6em; font-size:.88rem; color: var(--ink-soft); padding-bottom:.75rem; border-bottom:1px solid var(--line); }
-.sources-list a{ font-weight:600; }
-
-.site-footer{ background: var(--forest); color: rgba(247,247,242,0.88); margin-top: 40px; }
-[data-theme="dark"] .site-footer{ background: #0B1311; }
-.site-footer a{ color: rgba(247,247,242,0.88); }
-.site-footer__grid{ display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 2.2rem; padding: 3rem 0 2rem; }
-.site-footer__brand{ font-family: var(--font-display); font-weight:700; font-size:1.2rem; color:#fff; margin-bottom:.6em; }
-.site-footer h5{ font-family: var(--font-mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color: rgba(247,247,242,0.55); margin:0 0 .9em; }
-.site-footer ul{ list-style:none; margin:0; padding:0; display:grid; gap:.55em; }
-.site-footer ul a{ font-size:.9rem; }
-.site-footer__legal{ border-top:1px solid rgba(247,247,242,0.15); padding: 1.4rem 0 2rem; font-size:.78rem; color: rgba(247,247,242,0.6); }
-.site-footer__legal p{ margin: 0 0 .8em; color: rgba(247,247,242,0.6); }
-@media (max-width: 880px){ .site-footer__grid{ grid-template-columns: 1fr 1fr; } }
-@media (max-width: 540px){ .site-footer__grid{ grid-template-columns: 1fr; } }
-
-/* ---------- FAQ accordion ---------- */
-.accordion{ border-top:1px solid var(--line); }
-.accordion-item{ border-bottom:1px solid var(--line); }
-.accordion-trigger{
-  width:100%; text-align:left; background:none; border:0; cursor:pointer;
-  display:flex; justify-content:space-between; align-items:center; gap:1rem;
-  padding: 1.2rem 0; font-family: var(--font-body); font-weight:600; font-size:1rem; color: var(--ink);
-}
-.accordion-trigger svg{ flex:none; width:18px; height:18px; transition: transform .2s ease; color: var(--ink-soft); }
-.accordion-item.is-open .accordion-trigger svg{ transform: rotate(45deg); }
-.accordion-panel{ max-height:0; overflow:hidden; transition: max-height .25s ease; }
-.accordion-panel__inner{ padding: 0 0 1.3rem; color: var(--ink-soft); font-size:.94rem; max-width: 70ch; }
-
-/* ---------- Toasts ---------- */
-.toast-region{ position:fixed; bottom:20px; right:20px; z-index:999; display:flex; flex-direction:column; gap:.6rem; max-width: min(360px, calc(100vw - 40px)); }
-.toast{
-  background: var(--ink); color: var(--paper); border-radius: var(--radius-sm); box-shadow: var(--shadow);
-  padding: .85em 1.1em; font-size: .88rem; display:flex; align-items:flex-start; gap:.6em;
-  animation: toast-in .18s ease;
-}
-.toast--success{ background: var(--forest); }
-.toast--warning{ background: var(--rose); }
-@keyframes toast-in{ from{ opacity:0; transform: translateY(6px); } to{ opacity:1; transform:none; } }
-
-/* ---------- Page header (used on inner pages) ---------- */
-.page-header{ padding: 48px 0 32px; border-bottom: 1px solid var(--line); }
-.page-header .eyebrow{ margin-bottom:.8em; }
-.page-header p{ color: var(--ink-soft); max-width: 60ch; font-size: 1.05rem; }
-.breadcrumb{ font-family: var(--font-mono); font-size:.74rem; color: var(--ink-soft); margin-bottom:1.2em; text-transform:uppercase; letter-spacing:.05em; }
-.breadcrumb a{ color: var(--ink-soft); }
-
-/* ---------- State guide table ---------- */
-.data-table{ width:100%; border-collapse: collapse; font-size:.92rem; }
-.data-table th, .data-table td{ text-align:left; padding: .85em 1em; border-bottom:1px solid var(--line); }
-.data-table th{ font-family: var(--font-mono); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; color: var(--ink-soft); }
-.table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: var(--radius-md); }
-.table-wrap .data-table{ margin:0; }
-.table-wrap th, .table-wrap td{ border-bottom:1px solid var(--line); white-space:nowrap; }
-
-/* ---------- Prose content ---------- */
-.prose h2{ margin-top:1.6em; }
-.prose h3{ margin-top:1.3em; }
-.prose ul, .prose ol{ color: var(--ink-soft); }
-.prose li{ margin-bottom:.4em; }
-
-/* ---------- Misc ---------- */
-.center{ text-align:center; }
-.section-head{ max-width: 640px; margin: 0 0 2.4rem; }
-.section-head--center{ margin-inline:auto; text-align:center; }
-.tag-row{ display:flex; gap:.6rem; flex-wrap:wrap; margin: 1rem 0 0; }
-.tag-row a{ font-family: var(--font-mono); font-size:.78rem; border:1px solid var(--line); border-radius: 999px; padding:.4em .9em; color: var(--ink-soft); }
-.tag-row a:hover{ border-color: var(--forest); color: var(--forest); text-decoration:none; }
+<script>document.getElementById('ccc-year').textContent = new Date().getFullYear();</script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
