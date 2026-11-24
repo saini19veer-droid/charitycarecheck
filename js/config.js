@@ -2,7 +2,7 @@
  * CharityCareCheck.com — Configuration Data
  * All static data objects are centralized here for easy maintenance.
  * Update FPL figures annually (HHS releases new guidelines each January).
- * Last updated: 2026
+ * Last updated: 2026. State notes re-verified against official sources Nov. 24, 2026.
  */
 
 // ─── FEDERAL POVERTY LEVEL DATA (2026) ───────────────────────────────────────
@@ -17,28 +17,28 @@ const FPL_2026 = {
 
 // ─── STATE-SPECIFIC CHARITY CARE NOTES ───────────────────────────────────────
 // Covers states with laws that go beyond baseline federal 501(r) requirements.
-// Source: National Health Law Program, state legislative databases.
+// Source: state statutes and state agency pages; re-check each January.
 const STATE_NOTES = {
-  'California': "California's Hospital Fair Pricing Act (Health & Safety Code §127400 et seq.) requires nonprofit hospitals to let any uninsured patient or patient with high medical costs apply for charity care if family income is at or below 400% of the federal poverty level (raised from 350% effective Jan. 1, 2025). As of 2025, CA hospitals also can't use asset tests, application deadlines, or credit reporting against charity-care-eligible patients.",
-  'New York': "New York's Indigent Care Pool supplements hospital charity care. Hospitals receiving state funds must maintain formal programs. NY also has strong protections against collections during an active charity care application.",
-  'Illinois': 'The Illinois Hospital Uninsured Patient Discount Act requires hospitals to provide discounts to uninsured patients under 200% FPL and sliding scale discounts up to 600% FPL in some cases.',
-  'Massachusetts': "Massachusetts has some of the strongest charity care laws in the nation. The Health Safety Net program supplements hospital charity care for patients under 400% FPL. Hospitals must also screen all patients proactively.",
-  'Texas': 'Texas has no statewide charity care mandate beyond federal 501(r) requirements for nonprofits. However, county hospital districts often have broader programs. Ask specifically about "financial assistance" rather than just "charity care."',
-  'Florida': 'Florida law requires nonprofit hospitals to maintain charity care programs. The state also has the Florida KidCare program, which may cover children in your household regardless of your own eligibility.',
-  'Colorado': 'Colorado HB 22-1285 requires all hospitals to provide free care to patients under 250% FPL and substantial discounts up to 400% FPL, and limits cost-sharing for patients under 600% FPL.',
-  'Washington': 'Washington State law (RCW 70.170) requires hospital charity care for patients under 100% FPL and partial discounts up to 200% FPL. Many hospitals voluntarily extend these thresholds further.',
-  'Oregon': 'Oregon requires nonprofit hospitals to provide free care to patients under 200% FPL and discounts up to 400% FPL. Notably, Oregon prohibits hospitals from reporting charity care-eligible debt to credit agencies.',
-  'Minnesota': "Minnesota's sliding fee charity care law is one of the most patient-friendly in the US, extending meaningful discounts to patients up to 275% FPL at most nonprofit hospitals.",
-  'New Jersey': 'New Jersey requires all hospitals to offer a charity care program and to notify patients of their rights at admission. The state funds a Charity Care subsidy that reimburses hospitals for qualifying uncompensated care.',
-  'Connecticut': 'Connecticut requires nonprofit hospitals to make free care available to patients under 235% FPL and to maintain a sliding fee scale up to 400% FPL.',
-  'Maryland': "Maryland's unique all-payer rate-setting system means hospitals must provide free care to patients under 200% FPL. The state Health Services Cost Review Commission enforces these requirements.",
-  'default': 'Federal IRS 501(r) regulations require all nonprofit hospitals to have a Financial Assistance Policy (FAP). Ask specifically for their "Financial Assistance Policy" or "Charity Care Application" — hospitals are required to provide this documentation upon request.'
+  "California": "California's Hospital Fair Pricing Act (Health & Safety Code §127400 et seq.) applies to all California hospitals. Since Jan. 1, 2022 (AB 1020), uninsured patients and patients with high medical costs can qualify for charity care or discounted payment at incomes up to 400% of the federal poverty level (previously 350%). Since Jan. 1, 2025 (AB 2297), hospitals can't use asset tests, set application deadlines, or report hospital debt to credit reporting agencies.",
+  "New York": "New York's Hospital Financial Assistance Law requires most hospitals to waive all charges for households below 200% FPL, and to cap what patients pay at 200-300% FPL (10% of the Medicaid amount for uninsured patients) and 301-400% FPL (20%). Hospitals can't send your bill to a collector while your application is under review, or until at least six months after the first bill, and can't ask about assets such as a house or car.",
+  "Illinois": "The Illinois Hospital Uninsured Patient Discount Act covers uninsured patients. At urban hospitals, family income up to 200% FPL gets a 100% discount, and income up to 600% FPL gets a discount, on medically necessary services over $150 per admission or encounter. Rural and critical access hospitals use lower limits (100% discount up to 125% FPL, discounts up to 300% FPL). Payments are capped at 20% of family income in a 12-month period.",
+  "Massachusetts": "Massachusetts' Health Safety Net can pay for hospital services for uninsured and underinsured residents with family income up to 150% FPL, and partially (after a deductible) above 150% up to 300% FPL. Ask the hospital whether you qualify for the Health Safety Net, or call (877) 910-2100 for details.",
+  "Texas": "Texas has no statewide income cutoff for charity care. Under Health & Safety Code Chapter 311, nonprofit hospitals must each year meet one of three community-benefit standards that include charity and indigent care, but each hospital sets its own eligibility rules. County hospital districts often have broader programs. Ask specifically about \"financial assistance\" rather than just \"charity care.\"",
+  "Florida": "Florida does not require nonprofit hospitals to run a charity care program, but Fla. Stat. 395.301 requires hospitals to post their financial assistance and charity care policies on their website, and to give you an itemized bill within 7 days of your request after discharge. Check eligibility for Florida KidCare for children in your household.",
+  "Colorado": "Colorado's Hospital Discounted Care program (HB 21-1198) limits what patients at or below 250% FPL can be billed at general acute and critical access hospitals, at rates set by the state. Payment plans can't exceed 4% of gross monthly income for hospital bills (2% for each separately billing provider) or 36 payments.",
+  "Washington": "Washington's charity care law (RCW 70.170, WAC 246-453) requires free care up to 200% FPL at most hospitals. For services since July 1, 2022, larger \"Tier 1\" hospitals must discount care up to 400% FPL and \"Tier 2\" hospitals up to 300% FPL. Charity care applies to past bills even if they're old or in collections.",
+  "Oregon": "Oregon requires nonprofit hospitals to provide financial assistance: 100% at up to 200% FPL, 75% at 201-300%, 50% at 301-350%, and 25% at 351-400% FPL (applied to your share after insurance). Since July 1, 2024 hospitals must automatically prescreen uninsured, Medicaid-enrolled, and high-balance patients, and since Jan. 1, 2025 patients can appeal denials.",
+  "Minnesota": "Minnesota hospitals must try to screen uninsured patients for charity care within 30 days of service. Until your eligibility is decided, or while an application is pending, the hospital can't refer the debt to collections, start a payment plan, or offer you a loan for the bill. Each hospital sets its own income limits.",
+  "New Jersey": "New Jersey's Charity Care program provides free hospital care for eligible residents with income up to 200% FPL, and a sliding scale from 200% to 300% FPL (patients pay 20% to 80% of the charge). Assets are limited to $7,500 for an individual or $15,000 for a family. Physician, anesthesia, and radiology fees are billed separately and may not be reduced.",
+  "Connecticut": "Connecticut requires nonprofit hospitals to offer free and/or discounted care, but each hospital sets its own rules. Uninsured patients under 250% FPL who aren't eligible for public insurance can't be billed more than the cost of providing services. Hospitals and their collectors can't report unpaid medical bills to credit bureaus.",
+  "Maryland": "Maryland hospitals must provide free medically necessary care at or below 200% FPL, and reduced-cost care (75% off at 201-250% FPL, 60% off at 251-300%). Patients with medical debt over 25% of family income can get discounts up to 500% FPL. You have 240 days from the first bill to apply, and billing and collections pause while your application is reviewed.",
+  "default": 'Federal IRS 501(r) regulations require all nonprofit hospitals to have a Financial Assistance Policy (FAP). Ask specifically for their "Financial Assistance Policy" or "Charity Care Application" — hospitals are required to provide this documentation upon request.'
 };
 
 // ─── HOSPITAL TYPE INFO MESSAGES ─────────────────────────────────────────────
 const HOSPITAL_TYPE_MESSAGES = {
-  nonprofit: '✅ <strong>Best case scenario.</strong> Nonprofit hospitals with 501(c)(3) status are federally required by IRS 501(r) rules to maintain a Financial Assistance Policy. They MUST provide free or reduced care to qualifying patients.',
-  government: '✅ <strong>Strong protections.</strong> Public/government hospitals (county, VA, state) often have the broadest charity care programs and are subject to both federal and state mandates.',
+  nonprofit: '✅ <strong>Best case scenario.</strong> Nonprofit hospitals with 501(c)(3) status are federally required by IRS 501(r) rules to maintain a Financial Assistance Policy. They must maintain a Financial Assistance Policy and apply it consistently to qualifying patients.',
+  government: '✅ <strong>Often good options.</strong> Public/government hospitals (county, state) frequently run their own indigent-care programs and may be subject to state or county rules, and to federal rules if they hold 501(c)(3) status. Ask for the county or state assistance program.',
   forprofit: '⚠️ <strong>Fewer legal protections.</strong> For-profit hospitals have no federal charity care obligation. However, many still offer financial assistance — always ask. California, Colorado, and several other states require them to provide charity care regardless.',
   unknown: '💡 <strong>Easy to find out.</strong> Search "[hospital name] 501c3" or "[hospital name] nonprofit" on Google. Or call billing and ask: "Is this hospital a nonprofit or tax-exempt facility?"'
 };
@@ -48,28 +48,28 @@ const HOSPITAL_RIGHTS = {
   nonprofit: [
     { label: 'Required to have FAP',        val: 'Yes — federal law',          hi: true  },
     { label: 'Must post FAP publicly',       val: 'Yes — IRS 501(r)',           hi: true  },
-    { label: 'Must provide 240-day window',  val: 'Yes — to apply',            hi: true  },
-    { label: 'Can report to credit bureaus', val: 'Only after 240 days',       hi: false },
+    { label: 'Application window',          val: 'At least 240 days to apply', hi: true  },
+    { label: 'Can report to credit bureaus', val: 'Not before 120 days + 30-day notice', hi: false },
     { label: 'Must write off if eligible',   val: 'Yes',                       hi: true  },
   ],
   government: [
     { label: 'Charity care obligation',      val: 'Yes — state + federal',     hi: true  },
-    { label: 'Sliding scale discounts',      val: 'Typically very broad',      hi: true  },
+    { label: 'Sliding scale discounts',      val: 'Varies by county/state', hi: false },
     { label: 'Application process',          val: 'Ask for "County Assistance"',hi: false },
-    { label: 'Credit reporting protection',  val: 'Often stronger than nonprofit',hi: true},
+    { label: 'Credit reporting protection',  val: 'Depends on state law',      hi: false },
   ],
   forprofit: [
     { label: 'Federal FAP obligation',       val: 'No',                        hi: false },
     { label: 'State law may require it',     val: 'CA, IL, NY, WA, others',   hi: false },
     { label: 'Voluntary programs exist',     val: 'Ask specifically',          hi: false },
     { label: 'Negotiation possible',         val: 'Always try',                hi: true  },
-    { label: 'Uninsured discount',           val: 'Often 30–50%',              hi: true  },
+    { label: 'Uninsured discount',           val: 'Ask about self-pay discounts', hi: true  },
   ],
   unknown: [
     { label: 'First step',                   val: 'Find out hospital type',    hi: false },
     { label: 'Ask billing',                  val: '"Are you a 501(c)(3)?"',    hi: true  },
     { label: 'Search online',               val: '"[name] nonprofit status"', hi: false },
-    { label: 'Request FAP',                  val: 'All hospitals must answer', hi: true  },
+    { label: 'Request FAP',                  val: 'Nonprofits must provide it free', hi: true  },
   ]
 };
 
@@ -78,8 +78,8 @@ const HOSPITAL_RIGHTS = {
 const SOURCES = [
   {
     label: 'IRS Section 501(r) — Financial Assistance Requirements',
-    url: 'https://www.irs.gov/charities-non-profits/charitable-organizations/requirements-for-tax-exempt-hospitals-under-section-501r',
-    desc: 'Official IRS rules governing nonprofit hospital charity care obligations, FAP requirements, and the 240-day billing window.'
+    url: 'https://www.irs.gov/charities-non-profits/requirements-for-501c3-hospitals-under-the-affordable-care-act-section-501r',
+    desc: 'Official IRS rules governing nonprofit hospital charity care obligations, FAP requirements, and the 120-day and 240-day collection and application timelines.'
   },
   {
     label: 'HHS 2026 Federal Poverty Guidelines',
