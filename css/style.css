@@ -177,6 +177,7 @@ main{ display:block; }
   max-height: calc(100vh - var(--nav-h) - 40px); overflow-y:auto;
   display:none; flex-direction:column;
 }
+.nav__dropdown::after{ content:''; position:absolute; left:-12px; right:-12px; top:100%; height:20px; }
 .nav__dropdown:hover .nav__dropdown-panel,
 .nav__dropdown:focus-within .nav__dropdown-panel{ display:flex; }
 .nav__dropdown-panel a{
@@ -206,6 +207,7 @@ main{ display:block; }
   }
   .nav__links.is-open{ opacity:1; visibility:visible; pointer-events:auto; transform:none; }
   .nav__links a{ padding: .9em 0; border-bottom:1px solid var(--line); width:100%; }
+  .nav__dropdown::after{ display:none; }
   .nav__dropdown-panel{ position:static; transform:none; display:none; box-shadow:none; border:0; padding-left:.75rem; min-width:0; max-height:none; overflow:visible; }
   .nav__dropdown.is-open .nav__dropdown-panel{ display:flex; }
   .menu-toggle{ display:flex; }
