@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hospital Charity Care Eligibility Calculator (2026) | CharityCareCheck</title>
-<meta name="description" content="Find out if you qualify for free or reduced hospital care. Most nonprofit hospitals offer 100% free care if you earn under 200% of the poverty level — check your eligibility in 60 seconds.">
+<meta name="description" content="Find out if you qualify for free or reduced hospital care. Many hospitals offer free or discounted care at lower incomes. Check your eligibility in about 60 seconds.">
 <link rel="canonical" href="https://charitycarecheck.com/calculator">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hospital Charity Care Eligibility Calculator | CharityCareCheck">
@@ -154,7 +154,9 @@
   }
 
   /* ─── ADSENSE SLOT ─── */
-  .ad-slot {
+  /* Ad placeholders use slot "XXXXXXXXXX". Hidden until real AdSense slot IDs are added: delete the next rule then. */
+  .ad-slot { display: none !important; }
+  .ad-slot-unused {
     background: var(--card);
     border: 1px dashed var(--border);
     border-radius: var(--radius);
@@ -924,19 +926,19 @@
   <div class="header-inner">
     <div class="trust-pill"><span>🏥</span> Free Tool · No Signup Required</div>
     <h1>Do You Qualify for <em>Free</em> Hospital Care?</h1>
-    <p class="header-sub">Most nonprofit hospitals are legally required to provide free or reduced-cost care to low-income patients — but 75% of eligible patients never apply. Check your eligibility in under 60 seconds.</p>
+    <p class="header-sub">Nonprofit hospitals are legally required to have a financial assistance policy, but you usually have to apply for it. Check your eligibility in about 60 seconds.</p>
     <div class="header-stats">
       <div class="stat">
-        <span class="stat-num">$745B</span>
-        <span class="stat-label">Hospital revenue in 2023</span>
+        <span class="stat-num">240 days</span>
+        <span class="stat-label">Minimum time to apply at nonprofit hospitals</span>
       </div>
       <div class="stat">
-        <span class="stat-num">~2%</span>
-        <span class="stat-label">Provided as charity care</span>
+        <span class="stat-num">120 days</span>
+        <span class="stat-label">Minimum wait before credit reporting or lawsuits</span>
       </div>
       <div class="stat">
         <span class="stat-num">$66K</span>
-        <span class="stat-label">Income limit for free care (family of 4)</span>
+        <span class="stat-label">200% of poverty level, family of 4: a common free-care cutoff</span>
       </div>
     </div>
   </div>
@@ -1056,7 +1058,7 @@
           <div class="live-fpl-label" id="live-status-sub">Eligibility estimate</div>
         </div>
         <div>
-          <div class="live-preview-label">Potential savings</div>
+          <div class="live-preview-label">Bill you can ask to reduce</div>
           <div class="live-savings" id="live-savings-num">$–</div>
         </div>
       </div>
@@ -1131,7 +1133,7 @@
               <input type="checkbox" id="ch-medicaid" value="medicaid">
               <div>
                 <div class="check-text">I was denied Medicaid or don't qualify for Medicaid</div>
-                <div class="check-sub">This often fast-tracks hospital charity care applications</div>
+                <div class="check-sub">Keep the denial letter: hospitals may ask to see it</div>
               </div>
             </label>
             <label class="check-item">
@@ -1380,28 +1382,20 @@ function updateLivePreview() {
   const pct = calcFPLPct(income, size, state);
   document.getElementById('fpl-pct-large').textContent = pct + '%';
 
-  let statusText, statusSub, savings;
-  if (pct <= 100) {
-    statusText = '100% FREE'; statusSub = 'Very likely eligible';
-    savings = bill || income * 0.3;
-  } else if (pct <= 200) {
-    statusText = 'LIKELY FREE'; statusSub = 'Strong eligibility';
-    savings = bill ? bill * 0.9 : income * 0.2;
-  } else if (pct <= 300) {
-    statusText = '~50% OFF'; statusSub = 'Partial discount likely';
-    savings = bill ? bill * 0.5 : income * 0.1;
+  let statusText, statusSub;
+  if (pct <= 200) {
+    statusText = 'FREE CARE LIKELY'; statusSub = 'At or below a common free-care level';
   } else if (pct <= 400) {
-    statusText = '~25% OFF'; statusSub = 'Some discount possible';
-    savings = bill ? bill * 0.25 : income * 0.05;
+    statusText = 'DISCOUNT LIKELY'; statusSub = 'Within a common discount range';
   } else {
-    statusText = 'NEGOTIATE'; statusSub = 'Limited but possible';
-    savings = bill ? bill * 0.1 : 500;
+    statusText = 'NEGOTIATE'; statusSub = 'Above typical cutoffs, but ask';
   }
+  const savings = bill;
 
   document.getElementById('live-status-text').textContent = statusText;
   document.getElementById('live-status-sub').textContent = statusSub;
   const savEl = document.getElementById('live-savings-num');
-  savEl.textContent = '$' + Math.round(savings).toLocaleString();
+  savEl.textContent = savings ? '$' + Math.round(savings).toLocaleString() : '–';
   savEl.classList.remove('pulse');
   void savEl.offsetWidth;
   savEl.classList.add('pulse');
@@ -1438,60 +1432,49 @@ function calculateAndShow() {
   const fplBase = getFPL(size, state);
 
   // ─── Determine tier ───
-  let tier, discountPct, tierLabel, tierClass, headline, summary;
-  let boostReason = '';
+  // Based ONLY on your FPL percentage. Where a state's law sets a number (STATE_THRESHOLDS in config.js)
+  // we use it; otherwise we use common bands (free at/below 200% FPL, discounts to 400% FPL) and say so.
+  let tier, tierLabel, tierClass, headline, summary, outcome;
+  const rule = (function () {
+    const r = STATE_THRESHOLDS[state];
+    if (!r) return null;
+    if (r.appliesTo === 'nonprofit' && htype === 'forprofit') return null;
+    if (r.uninsuredOnly && !uninsured) return null;
+    return r;
+  })();
+  const freeCut = (rule && rule.freeUpTo) ? rule.freeUpTo : 200;
+  const discCut = (rule && rule.discountUpTo) ? rule.discountUpTo : 400;
+  const billTxt = bill ? '$' + bill.toLocaleString() : 'your bill';
 
-  let effectivePct = fplPct;
-  if (uninsured) effectivePct = Math.max(effectivePct - 30, 50);
-  if (hardship) effectivePct = Math.max(effectivePct - 20, 50);
-  if (medicaid) effectivePct = Math.max(effectivePct - 15, 50);
-
-  if (htype === 'forprofit' && !['California','New York','Illinois','Massachusetts','Colorado','Washington','Oregon','Minnesota'].includes(state)) {
-    tier = 'negotiate';
-    discountPct = uninsured ? 30 : 15;
+  if (htype === 'forprofit' && !rule) {
+    tier = 'negotiate'; outcome = 'Negotiate';
     tierLabel = '⚖️ Negotiate Required';
     tierClass = 'tier-negotiate';
     headline = `You\'ll Need to Negotiate Directly — But Don\'t Pay Without Asking`;
-    summary = `For-profit hospitals have no federal obligation to offer charity care. However, you can and should ask about financial assistance programs. Hospital billing departments have significant discretion to reduce balances — especially for uninsured patients.`;
-  } else if (effectivePct <= 100) {
-    tier = 'free';
-    discountPct = 100;
-    tierLabel = '🏆 Likely Eligible for 100% Free Care';
+    summary = `For-profit hospitals have no federal obligation to offer charity care, and ${state} law doesn\'t set a requirement we can apply here. You can still ask for financial assistance, a self-pay discount, or a payment plan, and billing departments have discretion to reduce balances.`;
+  } else if (fplPct <= freeCut) {
+    tier = 'free'; outcome = 'Free care';
+    tierLabel = rule && rule.freeUpTo ? '🏆 Free Care Likely Under State Law' : '✅ Strong Candidate for Free Care';
     tierClass = 'tier-free';
-    headline = `Your Bill Could Be <span class="savings-highlight">Completely Eliminated</span>`;
-    summary = `At ${fplPct}% of the Federal Poverty Level, you are below the standard threshold for full charity care at most nonprofit hospitals. ${uninsured ? 'Being uninsured strengthens your case significantly.' : ''} Apply immediately — hospitals are required to have a process.`;
-  } else if (effectivePct <= 200) {
-    tier = 'free';
-    discountPct = effectivePct <= 150 ? 100 : 85;
-    tierLabel = discountPct === 100 ? '✅ Strong Eligibility for Free Care' : '✅ Likely 85–100% Discount';
-    tierClass = 'tier-free';
-    headline = `You\'re a Strong Candidate for <span class="savings-highlight">${discountPct === 100 ? 'Free Care' : 'Up to 100% Off'}</span>`;
-    summary = `At ${fplPct}% FPL, you fall within or near the free care threshold at most nonprofit hospitals. Many hospitals set their 100% free care cutoff at 200% FPL — you're in that window. ${hardship ? 'A recent financial hardship strengthens your case further.' : ''}`;
-  } else if (effectivePct <= 300) {
-    tier = 'partial';
-    discountPct = effectivePct <= 250 ? 65 : 45;
-    tierLabel = '📉 Partial Discount Very Likely';
+    headline = `Your Bill Could Be <span class="savings-highlight">Reduced to Zero</span>`;
+    summary = rule && rule.freeUpTo
+      ? `At ${fplPct}% of the Federal Poverty Level you are at or below ${freeCut}% FPL, the free-care level in ${rule.basis}. If you meet that program\'s other requirements (for example residency, and in some states being uninsured) and complete the application, covered hospitals must provide care at no charge at this income level. ${uninsured ? 'Being uninsured is relevant to several programs.' : ''}`
+      : `At ${fplPct}% of the Federal Poverty Level you are at or below 200% FPL, a free-care cutoff many hospital policies use. Each hospital sets its own number, so check its Financial Assistance Policy and apply. ${hardship ? 'A recent financial hardship can support your application.' : ''}`;
+  } else if (fplPct <= discCut) {
+    tier = 'partial'; outcome = 'Discount';
+    tierLabel = rule ? '📉 Discount Likely Under State Law' : '📉 Discount Likely';
     tierClass = 'tier-partial';
-    headline = `You May Qualify for a <span class="savings-highlight">${discountPct}%+ Discount</span>`;
-    summary = `At ${fplPct}% FPL, you're above free care thresholds but well within the sliding scale discount range (typically 200–400% FPL). Most nonprofit hospitals offer meaningful discounts here. Your bill of ${bill ? '$' + bill.toLocaleString() : 'your bill amount'} should be reduceable substantially.`;
-  } else if (effectivePct <= 400) {
-    tier = 'partial';
-    discountPct = 25;
-    tierLabel = '📋 Some Discount Possible';
-    tierClass = 'tier-partial';
-    headline = `Apply Anyway — You May Get <span class="savings-highlight">25%+ Off</span>`;
-    summary = `At ${fplPct}% FPL, you're at the edge of standard charity care thresholds, but many hospitals extend discounts up to 400% FPL. Hardship factors and being uninsured can shift your effective eligibility significantly.`;
+    headline = `You May Qualify for a <span class="savings-highlight">Reduced Bill</span>`;
+    summary = rule
+      ? `At ${fplPct}% FPL you are within the discount range in ${rule.basis} (up to ${discCut}% FPL). If you meet the program\'s other requirements, covered hospitals must reduce what you owe; the exact amount depends on your income and the hospital\'s policy. Your bill of ${billTxt} may be reduced.`
+      : `At ${fplPct}% FPL you are above common free-care cutoffs but within the 200–400% FPL range where many hospitals offer sliding-scale discounts. The discount depends on the hospital\'s policy, so ask for its Financial Assistance Policy. Your bill of ${billTxt} may be reduced.`;
   } else {
-    tier = 'negotiate';
-    discountPct = 15;
+    tier = 'negotiate'; outcome = 'Negotiate';
     tierLabel = '💬 Hardship Negotiation Strategy';
     tierClass = 'tier-negotiate';
     headline = `Above Standard Thresholds — But <span class="savings-highlight">Negotiation Works</span>`;
-    summary = `At ${fplPct}% FPL, you're above most charity care cutoffs — but hospitals still negotiate. Uninsured discounts, prompt-pay discounts, and payment plan negotiations can reduce your bill 15–40% even without formal charity care approval.`;
+    summary = `At ${fplPct}% FPL you are above ${rule ? 'the ' + state + ' discount range' : 'most charity care cutoffs'}. Hospitals still negotiate: ask about self-pay or prompt-pay discounts, payment plans, and hardship adjustments, and ask for the Financial Assistance Policy in case a higher-income tier applies to you.`;
   }
-
-  // ─── Estimated Savings ───
-  const estimatedSavings = bill ? Math.round(bill * discountPct / 100) : null;
 
   // ─── Build Result Hero ───
   document.getElementById('result-badge').className = 'result-tier-badge ' + tierClass;
@@ -1505,13 +1488,13 @@ function calculateAndShow() {
       <div class="metric-label">Your FPL percentage</div>
     </div>
     <div class="metric-box">
-      <div class="metric-value">${discountPct}%</div>
-      <div class="metric-label">Estimated discount</div>
+      <div class="metric-value">${outcome}</div>
+      <div class="metric-label">Likely outcome</div>
     </div>`;
-  if (estimatedSavings) {
+  if (bill) {
     metricsHTML += `<div class="metric-box">
-      <div class="metric-value">$${estimatedSavings.toLocaleString()}</div>
-      <div class="metric-label">Potential savings</div>
+      <div class="metric-value">$${bill.toLocaleString()}</div>
+      <div class="metric-label">Bill you can ask to reduce</div>
     </div>`;
   } else {
     metricsHTML += `<div class="metric-box">
@@ -1553,11 +1536,11 @@ function calculateAndShow() {
   // ─── Next Steps ───
   const steps = [];
   if (htype === 'forprofit') {
-    steps.push({ n:1, title: 'Call billing and ask for an "uninsured discount"', desc: 'Say: "I\'m uninsured and cannot pay this bill in full. What financial assistance programs do you offer?" Many will apply 30–50% off without formal charity care.', time: 'Do this today' });
+    steps.push({ n:1, title: 'Call billing and ask for an "uninsured discount"', desc: 'Say: "I\'m uninsured and cannot pay this bill in full. What financial assistance programs do you offer?" Many hospitals offer self-pay or prompt-pay discounts without a formal charity care application.', time: 'Do this today' });
     steps.push({ n:2, title: 'Ask for the charity care or financial assistance application', desc: 'Even for-profit hospitals often have programs — they\'re just not required to. Be persistent. Ask to speak with the financial assistance coordinator specifically.', time: 'Same call' });
   } else {
     steps.push({ n:1, title: 'Call the hospital billing department NOW', desc: 'Say: "I\'d like to apply for financial assistance under your charity care policy." They are required to give you an application. Do not pay anything until you apply.', time: 'Do this today' });
-    steps.push({ n:2, title: 'Request a copy of their Financial Assistance Policy (FAP)', desc: 'Nonprofit hospitals must provide this in writing. It outlines income thresholds, discount tiers, and the application deadline (usually 240 days from discharge).', time: 'Same call' });
+    steps.push({ n:2, title: 'Request a copy of their Financial Assistance Policy (FAP)', desc: 'Nonprofit hospitals must provide this in writing. It outlines income thresholds, discount tiers, and the application deadline (nonprofit hospitals must give you at least 240 days from your first bill after discharge).', time: 'Same call' });
   }
   steps.push({ n: steps.length+1, title: 'Gather your documents', desc: 'Collect income proof, tax returns, and bank statements. The document checklist on this page covers everything most hospitals need.', time: '1–2 days' });
   steps.push({ n: steps.length+1, title: 'Submit your application with the dispute letter', desc: 'Use the pre-filled letter below as your cover page. Send via certified mail and keep copies of everything.', time: '1 week' });
@@ -1565,7 +1548,7 @@ function calculateAndShow() {
     steps.push({ n: steps.length+1, title: '⚠️ Critical: Send a "debt validation letter" immediately', desc: 'Your bill is in collections. Under the FDCPA, you have 30 days to request debt validation. This pauses collection activity. Use a template from the CFPB consumer resources.', time: 'Urgent — within 30 days of first contact' });
   }
   steps.push({ n: steps.length+1, title: 'If denied, appeal with this letter', desc: 'Denials can and should be appealed. Reference their own Financial Assistance Policy, your FPL percentage, and any extenuating circumstances. Request a review in writing.', time: 'Within 30 days of denial' });
-  steps.push({ n: steps.length+1, title: 'Contact your state insurance commissioner if rights are violated', desc: 'If a nonprofit hospital refuses to provide FAP documentation or denies you without a clear reason, file a complaint. This creates regulatory pressure and often resolves issues quickly.', time: 'If needed' });
+  steps.push({ n: steps.length+1, title: 'File a complaint if your rights are violated', desc: 'If a hospital refuses to provide its Financial Assistance Policy, ignores your application, or denies you without a clear reason, file a complaint with your state attorney general or health department. For a nonprofit hospital you can also report 501(r) violations to the IRS (Form 13909).', time: 'If needed' });
 
   document.getElementById('next-steps').innerHTML = steps.map(s =>
     `<div class="step-row">
@@ -1609,9 +1592,11 @@ HOUSEHOLD INFORMATION:
 • Federal Poverty Level (FPL): Approximately ${fplPct}% of FPL (2026 guidelines)
 • State of Residence: ${state}
 ${uninsured ? '• Insurance Status: Currently uninsured\n' : ''}${hardship ? '• Recent Financial Hardship: Yes (details available upon request)\n' : ''}${medicaid ? '• Medicaid Status: Not eligible / recently denied\n' : ''}
-LEGAL BASIS FOR THIS REQUEST:
-As a nonprofit hospital with 501(c)(3) tax-exempt status, your institution is required under IRS Section 501(r)(4) to maintain a written Financial Assistance Policy and to provide financial assistance to patients who qualify. Under 501(r)(6), you are prohibited from engaging in extraordinary collection actions before making a reasonable effort to determine whether I qualify for assistance.
-
+BASIS FOR THIS REQUEST:
+${htype === 'forprofit'
+  ? 'I am asking for financial assistance under your hospital\'s financial assistance or self-pay discount policy and any ' + state + ' law that applies to hospitals. Please send me a copy of that policy.'
+  : 'If your hospital is a 501(c)(3) tax-exempt organization, it is required under IRS Section 501(r)(4) to maintain a written Financial Assistance Policy and to provide financial assistance to patients who qualify. Under 501(r)(6), it may not take extraordinary collection actions before making a reasonable effort to determine whether I qualify for assistance.'}
+${rule ? 'My income is at ' + fplPct + '% of the Federal Poverty Level, which falls within the range covered by ' + rule.basis + '.\n' : ''}
 WHAT I AM REQUESTING:
 1. Full waiver or maximum discount of my balance based on my income level
 2. A written explanation of your charity care income thresholds and discount tiers
@@ -1750,7 +1735,7 @@ function copyLink() {
 
 function shareReddit() {
   const url = encodeURIComponent(window.location.href);
-  const title = encodeURIComponent('Free tool: Check if you qualify for hospital charity care — most nonprofit hospitals will write off your bill if you earn under 200% FPL');
+  const title = encodeURIComponent('Free tool: check whether you may qualify for free or discounted hospital care');
   window.open(`https://reddit.com/submit?url=${url}&title=${title}`, '_blank');
 }
 
